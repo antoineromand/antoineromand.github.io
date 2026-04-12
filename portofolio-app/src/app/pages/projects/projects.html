@@ -8,7 +8,7 @@
       github.</p>
   </div>
   <app-projects-filter (filterOutputEvent)="getFilters($event)" )></app-projects-filter>
-  @for (project of projects; track project.id) {
+  @for (project of projects(); track project.id) {
     <app-project [project]="project"></app-project>
   }
 </div>

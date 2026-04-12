@@ -1,5 +1,5 @@
-import {Component, inject, OnInit} from '@angular/core';
-import {Project, ProjectService} from '../../services/project-service';
+import {Component, computed, inject, signal} from '@angular/core';
+import {ProjectService} from '../../services/project-service';
 import {ProjectComponent} from '../../components/reusable/project/project';
 import {AppProjectsFilter} from '../../components/core/app-projects-filter/app-projects-filter';
 
@@ -9,15 +9,14 @@ import {AppProjectsFilter} from '../../components/core/app-projects-filter/app-p
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
-export class ProjectsPage implements OnInit {
+export class ProjectsPage {
   service = inject(ProjectService);
-  projects: Project[] = [];
-  filters: { query: string, orderById: string } = {query: "", orderById: "ASC"};
-  ngOnInit() {
-    this.projects = this.service.getProjects();
-  }
+  projects = computed(() =>
+    this.service.getProjects(this.filters())
+  );
+  filters = signal({query: "", orderById: "ASC"});
 
   getFilters(filters: { query: string, orderById: string }) {
-    this.filters = filters;
+    this.filters.set(filters);
   }
 }

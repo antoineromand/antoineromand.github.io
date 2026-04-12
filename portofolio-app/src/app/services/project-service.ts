@@ -16,7 +16,39 @@ export type Project = {
   providedIn: 'root',
 })
 export class ProjectService {
-  getProjects(): Project[] {
+  private parseQuery(search: string): string[] {
+    return search
+      .toLowerCase()
+      .split(",")
+      .map(s => s.trim())
+      .filter(Boolean);
+  }
+
+  private sortById(data: Project[], order = "ASC") {
+    return [...data].sort((a, b) => {
+      return order === "ASC"
+        ? a.id - b.id
+        : b.id - a.id;
+    });
+  }
+
+  getProjects(filters: { query: string, orderById: string }): Project[] {
+    let result: Project[] = [...data.projects];
+    if (filters) {
+      if (filters.query && filters.query.length > 1) {
+        const queries = this.parseQuery(filters.query);
+
+        if (queries.length === 0) return [];
+
+        result = data.projects.filter(project => {
+          return project.tags.some(tag =>
+            queries.some(q => tag.toLowerCase().includes(q))
+          );
+        });
+      }
+
+      return this.sortById(result, filters.orderById);
+    }
     return data.projects;
   }
 }
