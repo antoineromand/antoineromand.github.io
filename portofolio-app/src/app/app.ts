@@ -7,7 +7,7 @@ import {AppFooter} from './components/core/app-footer/app-footer';
   selector: 'app-root',
   imports: [RouterOutlet, AppHeader, AppFooter],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('portofolio-app');

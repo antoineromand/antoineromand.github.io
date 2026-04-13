@@ -7,10 +7,10 @@ import {Component, OnInit, output, signal} from '@angular/core';
   styleUrl: './app-projects-filter.scss',
 })
 export class AppProjectsFilter implements OnInit {
-  query = signal<string>("");
-  orderById = signal<string>("ASC");
+  query = signal<string>('');
+  orderById = signal<string>('ASC');
 
-  filterOutputEvent = output<{ query: string, orderById: string }>()
+  filterOutputEvent = output<{ query: string; orderById: string }>();
 
   reloadFilter() {
     this.filterOutputEvent.emit({query: this.query(), orderById: this.orderById()});

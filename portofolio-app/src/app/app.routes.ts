@@ -8,4 +8,3 @@ export const routes: Routes = [
   {component: HomePage, path: 'about'},
   {component: HomePage, path: 'contact'},
 ];
-

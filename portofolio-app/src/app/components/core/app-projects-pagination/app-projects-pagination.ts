@@ -34,6 +34,5 @@ export class AppProjectsPagination {
     const newOffset = this.offset() + this.limit();
 
     this.updateLastIdEvent.emit(newOffset);
-
   }
 }

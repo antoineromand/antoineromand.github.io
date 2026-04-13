@@ -16,14 +16,14 @@
     .home-title-main {
       font-weight: 800;
       font-size: 64px;
-      font-family: "Quantico", sans-serif !important;
+      font-family: 'Quantico', sans-serif !important;
       color: $red-color;
     }
 
     .home-title-sub {
       font-weight: 100;
       font-size: 64px;
-      font-family: "Quantico", sans-serif !important;
+      font-family: 'Quantico', sans-serif !important;
       opacity: 0.7;
     }
 
@@ -37,7 +37,7 @@
   h3 {
     font-weight: 300;
     opacity: 0.5;
-    font-family: "Walter Turncoat", cursive !important;
+    font-family: 'Walter Turncoat', cursive !important;
   }
 }
 
@@ -46,11 +46,10 @@
   flex: 1;
 }
 
-
 @media (max-width: 573px) {
   .home-container {
     padding: 3rem;
-    font-family: "Noto Serif", serif;
+    font-family: 'Noto Serif', serif;
     text-transform: uppercase;
     text-align: center;
 

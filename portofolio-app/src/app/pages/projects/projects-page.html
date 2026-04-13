@@ -4,13 +4,19 @@
       <span class="main-quote">Roses are red, Java is blue.</span>
       <span class="sub-quote">Enfin, je crois ?</span>
     </div>
-    <p class="resume">Vous retrouverez ici certains de mes projets à but éducatif. N'hésitez pas à aller sur mon
-      github.</p>
+    <p class="resume">
+      Vous retrouverez ici certains de mes projets à but éducatif. N'hésitez pas à aller sur mon
+      github.
+    </p>
   </div>
   <app-projects-filter (filterOutputEvent)="getFilters($event)" )></app-projects-filter>
   @for (project of projects(); track project.id) {
     <app-project [project]="project"></app-project>
   }
-  <app-projects-pagination [offset]="this.offset()" [limit]="this.limit" [total]="this.total()"
-                           (updateLastIdEvent)="getPagination($event)"></app-projects-pagination>
+  <app-projects-pagination
+    [offset]="this.offset()"
+    [limit]="this.limit"
+    [total]="this.total()"
+    (updateLastIdEvent)="getPagination($event)"
+  ></app-projects-pagination>
 </div>

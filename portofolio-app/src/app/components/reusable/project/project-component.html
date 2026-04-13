@@ -4,8 +4,8 @@
     <img
       [src]="project().img.length === 0 ? defaultImgSrc : project().img"
       alt="t"
-      class="w-142 h-80 object-cover
-    "/>
+      class="w-142 h-80 object-cover"
+    />
     <div
       class="absolute -bottom-2 bg-[#faf9f6] p-8 uppercase w-50"
       [ngClass]="[project().status, isEven(project().id) ? 'right-0' : 'left-0']"

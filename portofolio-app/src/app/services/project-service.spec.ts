@@ -15,7 +15,7 @@ describe('ProjectService', () => {
   });
 
   it('should filter projects on query correctly', () => {
-    const projects: Project[] = service.getFilteredProjects({query: "DD", orderById: "ASC"});
+    const projects: Project[] = service.getFilteredProjects({query: 'DD', orderById: 'ASC'});
     expect(projects.length).toBe(1);
     expect(projects[0].id).toBe(3);
     expect(projects[0].tags.length).toBe(5);
@@ -23,15 +23,18 @@ describe('ProjectService', () => {
   });
 
   it('should sort projects correctly', () => {
-    const projects: Project[] = service.getFilteredProjects({query: "", orderById: "DESC"});
+    const projects: Project[] = service.getFilteredProjects({query: '', orderById: 'DESC'});
     expect(projects.length).toBe(3);
     expect(projects[0].id).toBe(3);
     expect(projects[1].id).toBe(2);
   });
 
   it('should filter and paginate projects on query correctly', () => {
-    const projects: Project[] = service.getProjects({query: "SPRI", orderById: "DESC"}, {start: 0, end: 1});
+    const projects: Project[] = service.getProjects(
+      {query: 'SPRI', orderById: 'DESC'},
+      {start: 0, end: 1},
+    );
     expect(projects.length).toBe(1);
     expect(projects[0].id).toBe(3);
-  })
+  });
 });

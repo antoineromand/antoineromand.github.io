@@ -8,9 +8,8 @@ describe('AppProjectsPagination', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppProjectsPagination]
-    })
-      .compileComponents();
+      imports: [AppProjectsPagination],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AppProjectsPagination);
     component = fixture.componentInstance;

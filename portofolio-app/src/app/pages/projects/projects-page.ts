@@ -16,7 +16,7 @@ export class ProjectsPage {
   offset = signal(0);
   limit = 2;
 
-  filters = signal({query: "", orderById: "ASC"});
+  filters = signal({query: '', orderById: 'ASC'});
 
   pagination = computed(() => {
     const start = this.offset();
@@ -24,15 +24,11 @@ export class ProjectsPage {
     return {start, end};
   });
 
-  filteredProjects = computed(() =>
-    this.service.getFilteredProjects(this.filters())
-  );
+  filteredProjects = computed(() => this.service.getFilteredProjects(this.filters()));
 
   total = computed(() => this.filteredProjects().length);
 
-  projects = computed(() =>
-    this.service.getProjects(this.filters(), this.pagination())
-  );
+  projects = computed(() => this.service.getProjects(this.filters(), this.pagination()));
 
   getFilters(filters: { query: string; orderById: string }) {
     this.filters.set(filters);

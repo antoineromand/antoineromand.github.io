@@ -3,13 +3,20 @@
   <div class="flex justify-between">
     <button
       class="cursor-pointer mono text-[10px] tracking-[0.3em] uppercase opacity-40 disabled:opacity-20 disabled:cursor-not-allowed"
-      (click)="previous()" [disabled]="isFirstPage()">précédant
+      (click)="previous()"
+      [disabled]="isFirstPage()"
+    >
+      précédant
     </button>
-    <span class="cursor-pointer mono text-[10px] tracking-[0.3em] uppercase opacity-40">{{ currentPage() }}
-      / {{ totalPages() }}</span>
+    <span class="cursor-pointer mono text-[10px] tracking-[0.3em] uppercase opacity-40"
+    >{{ currentPage() }} / {{ totalPages() }}</span
+    >
     <button
       class="cursor-pointer mono text-[10px] tracking-[0.3em] uppercase opacity-40 disabled:opacity-20 disabled:cursor-not-allowed"
-      (click)="next()" [disabled]="isLastPage()">suivant
+      (click)="next()"
+      [disabled]="isLastPage()"
+    >
+      suivant
     </button>
   </div>
 </div>

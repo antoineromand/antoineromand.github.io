@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import data from "../../projects.json";
+import data from '../../projects.json';
 
 export interface Project {
   id: number;
@@ -19,20 +19,18 @@ export class ProjectService {
   private parseQuery(search: string): string[] {
     return search
       .toLowerCase()
-      .split(",")
-      .map(s => s.trim())
+      .split(',')
+      .map((s) => s.trim())
       .filter(Boolean);
   }
 
-  private sortById(data: Project[], order = "ASC") {
+  private sortById(data: Project[], order = 'ASC') {
     return [...data].sort((a, b) => {
-      return order === "ASC"
-        ? a.id - b.id
-        : b.id - a.id;
+      return order === 'ASC' ? a.id - b.id : b.id - a.id;
     });
   }
 
-  getFilteredProjects(filters: { query: string, orderById: string }): Project[] {
+  getFilteredProjects(filters: { query: string; orderById: string }): Project[] {
     let result: Project[] = [...data.projects];
 
     if (filters?.query && filters.query.length > 1) {
@@ -40,10 +38,8 @@ export class ProjectService {
 
       if (queries.length === 0) return [];
 
-      result = result.filter(project =>
-        project.tags.some(tag =>
-          queries.some(q => tag.toLowerCase().includes(q))
-        )
+      result = result.filter((project) =>
+        project.tags.some((tag) => queries.some((q) => tag.toLowerCase().includes(q))),
       );
     }
 
@@ -51,8 +47,8 @@ export class ProjectService {
   }
 
   getProjects(
-    filters: { query: string, orderById: string },
-    pagination: { start: number, end: number }
+    filters: { query: string; orderById: string },
+    pagination: { start: number; end: number },
   ): Project[] {
     return this.getFilteredProjects(filters).slice(pagination.start, pagination.end);
   }
