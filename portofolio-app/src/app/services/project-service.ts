@@ -38,9 +38,13 @@ export class ProjectService {
 
       if (queries.length === 0) return [];
 
-      result = result.filter((project) =>
-        project.tags.some((tag) => queries.some((q) => tag.toLowerCase().includes(q))),
-      );
+      result = result.filter(project => {
+        return queries.every(query => {
+          return project.tags.some(tag =>
+            tag.toLowerCase().includes(query)
+          );
+        });
+      });
     }
 
     return this.sortById(result, filters.orderById);
