@@ -11,4 +11,6 @@
   @for (project of projects(); track project.id) {
     <app-project [project]="project"></app-project>
   }
+  <app-projects-pagination [offset]="this.offset()" [limit]="this.limit" [total]="this.total()"
+                           (updateLastIdEvent)="getPagination($event)"></app-projects-pagination>
 </div>

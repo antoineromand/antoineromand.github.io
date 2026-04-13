@@ -1,0 +1,13 @@
+@media (max-width: 478px) {
+  .filters {
+    flex-direction: column !important;
+    width: 100%;
+    gap: 1rem;
+  }
+  .select {
+    align-items: flex-start;
+  }
+  .search {
+    width: 100%;
+  }
+}

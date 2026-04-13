@@ -32,23 +32,28 @@ export class ProjectService {
     });
   }
 
-  getProjects(filters: { query: string, orderById: string }): Project[] {
+  getFilteredProjects(filters: { query: string, orderById: string }): Project[] {
     let result: Project[] = [...data.projects];
-    if (filters) {
-      if (filters.query && filters.query.length > 1) {
-        const queries = this.parseQuery(filters.query);
 
-        if (queries.length === 0) return [];
+    if (filters?.query && filters.query.length > 1) {
+      const queries = this.parseQuery(filters.query);
 
-        result = data.projects.filter(project => {
-          return project.tags.some(tag =>
-            queries.some(q => tag.toLowerCase().includes(q))
-          );
-        });
-      }
+      if (queries.length === 0) return [];
 
-      return this.sortById(result, filters.orderById);
+      result = result.filter(project =>
+        project.tags.some(tag =>
+          queries.some(q => tag.toLowerCase().includes(q))
+        )
+      );
     }
-    return data.projects;
+
+    return this.sortById(result, filters.orderById);
+  }
+
+  getProjects(
+    filters: { query: string, orderById: string },
+    pagination: { start: number, end: number }
+  ): Project[] {
+    return this.getFilteredProjects(filters).slice(pagination.start, pagination.end);
   }
 }
