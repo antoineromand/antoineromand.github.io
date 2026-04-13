@@ -6,7 +6,7 @@ describe('IdFormatterPipe', () => {
     expect(pipe).toBeTruthy();
 
     expect(pipe.transform(3)).toEqual("03");
-    expect(pipe.transform(4) === "4").toBeFalse();
+    expect(pipe.transform(4) === "4").toBeFalsy();
     expect(pipe.transform(11) === "11").toBeTruthy();
   });
 });
