@@ -1,6 +1,6 @@
 import {Component, computed, inject, signal} from '@angular/core';
 import {ProjectService} from '../../services/project-service';
-import {ProjectComponent} from '../../components/reusable/project/project';
+import {ProjectComponent} from '../../components/reusable/project/project-component';
 import {AppProjectsFilter} from '../../components/core/app-projects-filter/app-projects-filter';
 import {AppProjectsPagination} from '../../components/core/app-projects-pagination/app-projects-pagination';
 

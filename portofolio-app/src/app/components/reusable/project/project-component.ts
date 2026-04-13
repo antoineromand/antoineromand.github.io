@@ -9,8 +9,8 @@ import {IdFormatterPipe} from '../../../pipes/id-pipe-formatter-pipe';
     NgClass,
     IdFormatterPipe
   ],
-  templateUrl: './project.html',
-  styleUrl: './project.scss',
+  templateUrl: './project-component.html',
+  styleUrl: './project-component.scss',
 })
 export class ProjectComponent {
   project = input<ProjectType>();
