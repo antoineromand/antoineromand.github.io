@@ -5,7 +5,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 })
 export class IdFormatterPipe implements PipeTransform {
 
-  transform(value: number, ...args: unknown[]): unknown {
+  transform(value: number): string {
     if (value < 10) return "0" + value.toString();
     return value.toString();
   }

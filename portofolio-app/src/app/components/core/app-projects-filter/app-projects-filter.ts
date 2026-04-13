@@ -16,13 +16,13 @@ export class AppProjectsFilter implements OnInit {
     this.filterOutputEvent.emit({query: this.query(), orderById: this.orderById()});
   }
 
-  selectOrderById(event: any) {
-    this.orderById.set(event.target.value);
+  selectOrderById(event: Event) {
+    this.orderById.set((event.target as HTMLInputElement).value);
     this.reloadFilter();
   }
 
-  updateQuery(event: any) {
-    this.query.set(event.target.value);
+  updateQuery(event: Event) {
+    this.query.set((event.target as HTMLInputElement).value);
     this.reloadFilter();
   }
 

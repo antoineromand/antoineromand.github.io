@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Router, RouterModule} from '@angular/router';
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,6 @@ import {Router, RouterModule} from '@angular/router';
   styleUrl: './app-header.scss',
 })
 export class AppHeader {
-  constructor(private router: Router) {
-  }
   isMenuOpen = false;
 
   closeMenu(): void {

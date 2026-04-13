@@ -5,10 +5,10 @@ import {AppProjectsFilter} from '../../components/core/app-projects-filter/app-p
 import {AppProjectsPagination} from '../../components/core/app-projects-pagination/app-projects-pagination';
 
 @Component({
-  selector: 'projects-page',
+  selector: 'app-projects-page',
   imports: [ProjectComponent, AppProjectsFilter, AppProjectsPagination],
-  templateUrl: './projects.html',
-  styleUrl: './projects.scss',
+  templateUrl: './projects-page.html',
+  styleUrl: './projects-page.scss',
 })
 export class ProjectsPage {
   service = inject(ProjectService);

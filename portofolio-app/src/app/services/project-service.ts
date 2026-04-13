@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import data from "../../projects.json";
 
-export type Project = {
+export interface Project {
   id: number;
   title: string;
   description: string;

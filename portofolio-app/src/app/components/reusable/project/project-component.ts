@@ -13,8 +13,8 @@ import {IdFormatterPipe} from '../../../pipes/id-pipe-formatter-pipe';
   styleUrl: './project-component.scss',
 })
 export class ProjectComponent {
-  project = input<ProjectType>();
-  defaultImgSrc: string = "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_MQlv6kK2EWiD48KlM33C4I0Ftt9Ix88s8Mxsl3rCkQYKZST0JcQDHOxeRF6uUQnGYKd9ui5F9rhOiFeBlJsJXvjv_SYCAwKenlhQs-eKnw03_Z1nBL1zfiA85mtJ8RrsrsNpXZoRvWFhtRBS25Jc9TcxMiDo1hqqAlu_i4akSGRQnSHz8hI5AISrDVQ11v_sLvGw7vZPqAuYXkJAgG1g7-m1yX8UeFzuVQ0VIkH4HGRADxYZLOFn0BdsgvodurDz3TwMYU0MfA";
+  project = input.required<ProjectType>();
+  defaultImgSrc = "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_MQlv6kK2EWiD48KlM33C4I0Ftt9Ix88s8Mxsl3rCkQYKZST0JcQDHOxeRF6uUQnGYKd9ui5F9rhOiFeBlJsJXvjv_SYCAwKenlhQs-eKnw03_Z1nBL1zfiA85mtJ8RrsrsNpXZoRvWFhtRBS25Jc9TcxMiDo1hqqAlu_i4akSGRQnSHz8hI5AISrDVQ11v_sLvGw7vZPqAuYXkJAgG1g7-m1yX8UeFzuVQ0VIkH4HGRADxYZLOFn0BdsgvodurDz3TwMYU0MfA";
 
   status() {
     switch (this.project()?.status) {
