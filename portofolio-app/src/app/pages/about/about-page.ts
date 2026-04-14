@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import * as data from '../../../about.json'
 import {NgClass, UpperCasePipe} from '@angular/common';
+import {ExperienceComponent} from '../../components/reusable/experience/experience-component';
 
 export interface Information {
   readonly quote: readonly string[];
@@ -23,7 +24,8 @@ export interface Experience {
   selector: 'app-about-page',
   imports: [
     UpperCasePipe,
-    NgClass
+    NgClass,
+    ExperienceComponent,
   ],
   templateUrl: './about-page.html',
   styleUrl: './about-page.scss',
