@@ -1,4 +1,4 @@
-import {IdFormatterPipe} from './id-pipe-formatter-pipe';
+import {IdFormatterPipe} from './id-formatter-pipe';
 
 describe('IdFormatterPipe', () => {
   it('create an instance', () => {

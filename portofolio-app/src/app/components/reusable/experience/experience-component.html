@@ -2,11 +2,10 @@
   class="experience group py-10 md:py-16 border-t border-gray-200 flex flex-col md:flex-row items-start gap-6 md:gap-8 transition-colors duration-500"
   [class.border-b]="last()"
 >
-  <div class="w-full font-mono text-sm group-hover:text-[#ba002c] tracking-tight text-gray-500">
+  <div class="font-mono text-sm group-hover:text-[#ba002c] tracking-tight text-gray-500">
     {{ experience().date }}
   </div>
 
-  <!-- CONTENT -->
   <div class="w-full flex flex-col gap-4">
 
     <div>
@@ -37,14 +36,14 @@
       @for (task of experience().tasks; track $index) {
         <li class="text-gray-700 leading-relaxed flex gap-3">
           <span class="text-gray-400">—</span>
-          <span>{{ task }}</span>
+          <span class="text-justify">{{ task }}</span>
         </li>
       }
     </ul>
 
   </div>
 
-  <div class="w-full md:w-1/4 md:text-right">
+  <div class="md:w-1/4 md:text-right">
         <span class="text-[10px] tracking-widest uppercase text-gray-400">
           {{ experience().location | uppercase }}
         </span>
