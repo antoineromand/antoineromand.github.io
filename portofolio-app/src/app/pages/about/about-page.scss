@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+.home-container {
+  padding: 3rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+
+  .about-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+
+    .quote {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Noto Serif', serif !important;
+      font-size: 54px;
+      font-style: italic;
+    }
+
+    .header-description {
+      text-align: justify;
+    }
+  }
+
+
+}
+
+@media (max-width: 1200px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .about-header {
+    width: 100% !important;
+  }
+
+  .about-experience {
+
+    .experience {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

@@ -14,7 +14,7 @@ export class ProjectsPage {
   service = inject(ProjectService);
 
   offset = signal(0);
-  limit = 2;
+  limit = 3;
 
   filters = signal({query: '', orderById: 'ASC'});
 

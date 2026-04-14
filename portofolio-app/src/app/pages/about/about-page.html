@@ -1,0 +1,90 @@
+<div class="home-container flex-1 px-6 md:px-12 lg:px-20">
+  <div class="about-header">
+    <div class="quote">
+      @for (quote of info.quote; track $index) {
+        <span>{{ quote }}</span>
+      }
+    </div>
+
+    <div class="header-description">
+      <p>
+        {{ info.description }}
+      </p>
+    </div>
+
+    <div class="flex flex-row flex-wrap gap-1">
+      @for (skill of info.skills; track $index) {
+        <span
+          class="text-[10px] tracking-[0.2em] uppercase border rounded-sm px-2 py-1 transition-colors duration-300"
+          [ngClass]="{
+                'bg-gray-200 text-black border-gray-300': $index % 2 === 0,
+                'bg-transparent text-gray-600 border-gray-300': $index % 2 !== 0
+              }"
+        >
+              {{ skill | uppercase }}
+            </span>
+      }
+    </div>
+  </div>
+  <div class="about-experience flex flex-col space-y-0">
+    @for (exp of info.experiences; track $index) {
+      <div
+        class="experience group py-10 md:py-16 border-t border-gray-200 flex flex-col md:flex-row items-start gap-6 md:gap-8 transition-colors duration-500 hover:bg-gray-50"
+        [class.border-b]="$last"
+      >
+        <!-- DATE -->
+        <div class="w-full md:w-1/4 font-mono text-sm tracking-tight text-gray-500">
+          {{ exp.date }}
+        </div>
+
+        <!-- CONTENT -->
+        <div class="w-full md:w-2/4 flex flex-col gap-4">
+
+          <!-- TITLE -->
+          <div>
+            <h5
+              class="text-2xl mb-2 font-semibold text-black group-hover:text-[#ba002c] transition-colors duration-500">
+              {{ exp.position | uppercase }}
+            </h5>
+            <p class="text-sm uppercase tracking-[0.2em] text-gray-500">
+              {{ exp.company }} — {{ exp.contract }}
+            </p>
+          </div>
+
+          <!-- STACK -->
+          <div class="flex flex-wrap gap-2">
+            @for (skill of exp.stack; track $index) {
+              <span
+                class="text-[10px] tracking-[0.2em] uppercase border rounded-sm px-2 py-1 transition-colors duration-300"
+                [ngClass]="{
+                'bg-gray-200 text-black border-gray-300': $index % 2 === 0,
+                'bg-transparent text-gray-600 border-gray-300': $index % 2 !== 0
+              }"
+              >
+              {{ skill | uppercase }}
+            </span>
+            }
+          </div>
+
+          <!-- TASKS -->
+          <ul class="flex flex-col gap-2">
+            @for (task of exp.tasks; track $index) {
+              <li class="text-gray-700 leading-relaxed flex gap-3">
+                <span class="text-gray-400">—</span>
+                <span>{{ task }}</span>
+              </li>
+            }
+          </ul>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="w-full md:w-1/4 md:text-right">
+        <span class="text-[10px] tracking-widest uppercase text-gray-400">
+          {{ exp.location | uppercase }}
+        </span>
+        </div>
+      </div>
+    }
+  </div>
+</div>
