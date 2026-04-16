@@ -13,9 +13,9 @@
       <div class="group ">
         <label
           class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
-             group-focus-within:text-secondary transition" for="name"
+             group-focus-within:text-[#ba002c] transition font-bold" for="name"
         >
-          Name
+          Nom
         </label>
 
         <input
@@ -24,17 +24,17 @@
           id="name"
           placeholder="Votre nom"
           class="bg-transparent border-0 border-b border-outline-variant/30 py-4
-             focus:outline-none focus:border-secondary
+             focus:outline-none focus:border-[#ba002c]
              placeholder:opacity-20 placeholder:text-xs
-             uppercase font-mono text-sm tracking-widest
+              font-mono text-sm tracking-widest
              transition-all duration-300"
         />
 
         @if (form.controls.name.touched && form.controls.name.invalid) {
           <p
-            class="text-error text-xs mt-2 font-mono tracking-wide"
+            class="text-[#ba002c] text-xs mt-2 font-mono tracking-wide"
           >
-            Donnez moi un pseudo au moins...
+            Déclinez votre identité
           </p>
         }
 
@@ -42,8 +42,8 @@
 
       <div class="group">
         <label
-          class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
-             group-focus-within:text-secondary transition" for="email"
+          class="block font-mono text-[10px]  tracking-widest text-on-surface/40
+             group-focus-within:text-[#ba002c] transition font-bold uppercase" for="email"
         >
           Email
         </label>
@@ -54,15 +54,15 @@
           id="email"
           placeholder="Votre email"
           class="bg-transparent border-0 border-b border-outline-variant/30 py-4
-             focus:outline-none focus:border-secondary
+             focus:outline-none focus:border-[#ba002c]
              placeholder:opacity-20 placeholder:text-xs
-             uppercase font-mono text-sm tracking-widest
+             font-mono text-sm tracking-widest
              transition-all duration-300"
         />
 
         @if (form.controls.email.touched && form.controls.email.invalid) {
           <p
-            class="text-error text-xs mt-2 font-mono tracking-wide"
+            class="text-[#ba002c] text-xs mt-2 font-mono tracking-wide"
           >
             Ton mail me semble louche, change le..
           </p>
@@ -73,7 +73,7 @@
       <div class="group">
         <label
           class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
-             group-focus-within:text-secondary transition" for="content"
+             group-focus-within:text-[#ba002c] transition font-bold" for="content"
         >
           Message
         </label>
@@ -84,7 +84,7 @@
           id="content"
           placeholder="Votre message"
           class="bg-transparent border-0 border-b border-outline-variant/30 py-4
-             focus:outline-none focus:border-secondary
+             focus:outline-none focus:border-[#ba002c]
              placeholder:opacity-20 placeholder:text-xs
              font-mono text-sm tracking-widest resize-none
              transition-all duration-300"
@@ -92,7 +92,7 @@
 
         @if (form.controls.message.touched && form.controls.message.invalid) {
           <p
-            class="text-error text-xs mt-2 font-mono tracking-wide text-wrap"
+            class="text-[#ba002c] text-xs mt-2 font-mono tracking-wide text-wrap"
           >
             C'est pas sensé être vide..
           </p>
@@ -103,7 +103,7 @@
       <button
         type="submit"
         [disabled]="form.invalid"
-        class="px-10 py-4 mt-4
+        class="py-4 mt-4
              bg-black text-white
              font-mono text-xs tracking-widest uppercase
              transition-all duration-300
@@ -116,3 +116,47 @@
     </form>
   </div>
 </div>
+
+<dialog
+  [open]="openDialog()"
+  (close)="closeDialog()"
+  class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+         m-0 p-0 border border-gray-200 rounded-2xl shadow-xl
+         backdrop:bg-black/40"
+>
+  <div class="bg-white w-100 max-w-full p-6 space-y-6">
+
+    <div class="flex items-center justify-between">
+      <h2 class="text-lg font-semibold text-gray-900">
+        Surprise !
+      </h2>
+      <button
+        (click)="closeDialog()"
+        class="text-gray-400 hover:text-gray-700 transition"
+      >
+        ✕
+      </button>
+    </div>
+
+    <img src="/prank.gif" alt="gif d'un prank"/>
+
+    <p class="text-sm text-gray-600 leading-relaxed">
+      La fonctionnalité n'est pas encore intégrée, je t'invite à me contacter sur linkedin.
+    </p>
+
+    <div class="flex justify-end gap-3">
+      <button
+        (click)="closeDialog()"
+        class="px-4 py-2 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+      >
+        Adios
+      </button>
+      <button
+        class="px-4 py-2 text-sm rounded-lg bg-black text-white hover:bg-gray-800 transition"
+      >
+        <a href="https://www.linkedin.com/in/antoine-romand" target="_blank">Linkedin</a>
+      </button>
+    </div>
+
+  </div>
+</dialog>

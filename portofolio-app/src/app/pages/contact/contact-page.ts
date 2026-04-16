@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 
 @Component({
@@ -11,6 +11,7 @@ import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 })
 export class ContactPage {
   fb = inject(FormBuilder);
+  openDialog = signal(false);
 
   form = this.fb.group({
     name: ['', Validators.required],
@@ -20,7 +21,11 @@ export class ContactPage {
 
   onSubmit() {
     if (this.form.valid) {
-      console.log(this.form.value);
+      this.openDialog.set(true);
     }
+  }
+
+  closeDialog() {
+    this.openDialog.set(false);
   }
 }
