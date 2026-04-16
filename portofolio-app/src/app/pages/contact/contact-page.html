@@ -1,0 +1,118 @@
+<div class="home-container h-full">
+  <div class="flex flex-col justify-items-start contact-title">
+    <h1>Contactez-moi</h1>
+    <small>Un projet, une offre d'emploi, une envie de discuter dev ... N'hésitez pas à me contacter !</small>
+  </div>
+  <div class="contact-form relative">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="form"
+    >
+
+      <div class="group ">
+        <label
+          class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
+             group-focus-within:text-secondary transition" for="name"
+        >
+          Name
+        </label>
+
+        <input
+          type="text"
+          formControlName="name"
+          id="name"
+          placeholder="Votre nom"
+          class="bg-transparent border-0 border-b border-outline-variant/30 py-4
+             focus:outline-none focus:border-secondary
+             placeholder:opacity-20 placeholder:text-xs
+             uppercase font-mono text-sm tracking-widest
+             transition-all duration-300"
+        />
+
+        @if (form.controls.name.touched && form.controls.name.invalid) {
+          <p
+            class="text-error text-xs mt-2 font-mono tracking-wide"
+          >
+            Donnez moi un pseudo au moins...
+          </p>
+        }
+
+      </div>
+
+      <div class="group">
+        <label
+          class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
+             group-focus-within:text-secondary transition" for="email"
+        >
+          Email
+        </label>
+
+        <input
+          type="email"
+          formControlName="email"
+          id="email"
+          placeholder="Votre email"
+          class="bg-transparent border-0 border-b border-outline-variant/30 py-4
+             focus:outline-none focus:border-secondary
+             placeholder:opacity-20 placeholder:text-xs
+             uppercase font-mono text-sm tracking-widest
+             transition-all duration-300"
+        />
+
+        @if (form.controls.email.touched && form.controls.email.invalid) {
+          <p
+            class="text-error text-xs mt-2 font-mono tracking-wide"
+          >
+            Ton mail me semble louche, change le..
+          </p>
+        }
+
+      </div>
+
+      <div class="group">
+        <label
+          class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
+             group-focus-within:text-secondary transition" for="content"
+        >
+          Message
+        </label>
+
+        <textarea
+          rows="4"
+          formControlName="message"
+          id="content"
+          placeholder="Votre message"
+          class="bg-transparent border-0 border-b border-outline-variant/30 py-4
+             focus:outline-none focus:border-secondary
+             placeholder:opacity-20 placeholder:text-xs
+             font-mono text-sm tracking-widest resize-none
+             transition-all duration-300"
+        ></textarea>
+
+        @if (form.controls.message.touched && form.controls.message.invalid) {
+          <p
+            class="text-error text-xs mt-2 font-mono tracking-wide text-wrap"
+          >
+            C'est pas sensé être vide..
+          </p>
+        }
+
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="form.invalid"
+        class="px-10 py-4 mt-4
+             bg-black text-white
+             font-mono text-xs tracking-widest uppercase
+             transition-all duration-300
+             hover:bg-[#ba002c]
+             disabled:opacity-70 disabled:cursor-not-allowed"
+      >
+        <span>Soumettre</span>
+      </button>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.home-container {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+
+  h1 {
+    font-family: "Noto Serif", serif;
+    font-size: 48px;
+    font-style: italic;
+    opacity: 70%;
+  }
+
+  .contact-form {
+    width: 30%;
+
+    .group {
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 856px) {
+  .home-container {
+    flex-direction: column;
+    padding: 1rem;
+
+    .contact-title {
+      align-items: center;
+
+      small {
+        text-align: center;
+      }
+    }
+
+    .contact-form {
+      width: 80%;
+      margin: auto
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .group {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 386px) {
+  h1 {
+    font-size: 36px !important;
+  }
+}
