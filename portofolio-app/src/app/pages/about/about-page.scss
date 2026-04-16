@@ -23,6 +23,10 @@
     .header-description {
       text-align: justify;
     }
+
+    .cv {
+      margin-top: 10rem;
+    }
   }
 
 
@@ -34,7 +38,12 @@
   }
   .about-header {
     width: 100% !important;
+
+    .cv {
+      margin-top: 0 !important;
+    }
   }
+
 
   .about-experience {
 
@@ -42,5 +51,11 @@
       flex-direction: column;
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .quote {
+    font-size: 2rem !important;
   }
 }
