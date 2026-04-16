@@ -10,5 +10,5 @@ import {AppFooter} from './components/core/app-footer/app-footer';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('portofolio-app');
+  protected readonly title = signal('portofolio-antoiner-romand');
 }

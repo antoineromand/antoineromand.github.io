@@ -1,18 +1,15 @@
 @use 'variables' as *;
 
 .home-container {
-  margin: auto;
   padding: 3rem;
-  text-transform: uppercase;
-  text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 15%;
   .home-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h1 {
-    }
+    text-align: center;
+    text-transform: uppercase;
     .home-title-main {
       font-weight: 300;
       font-size: 64px;
@@ -39,11 +36,6 @@
     opacity: 0.5;
     font-family: 'Walter Turncoat', cursive !important;
   }
-}
-
-:host {
-  display: flex;
-  flex: 1;
 }
 
 @media (max-width: 573px) {

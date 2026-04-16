@@ -1,7 +1,7 @@
 import {Component, input} from '@angular/core';
 import {Project as ProjectType} from '../../../services/project-service';
 import {NgClass} from '@angular/common';
-import {IdFormatterPipe} from '../../../pipes/id-pipe-formatter-pipe';
+import {IdFormatterPipe} from '../../../pipes/id-formatter-pipe';
 
 @Component({
   selector: 'app-project',
