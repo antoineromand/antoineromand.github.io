@@ -94,6 +94,32 @@ npm run lint
 npm run format
 ```
 
+## Docker
+
+Le projet Angular peut etre construit et servi en conteneur via Nginx avec un build multi-stage.
+
+Fichiers concernes :
+
+- [`Dockerfile`](portofolio-app/Dockerfile)
+- [`nginx.conf`](portofolio-app/nginx.conf)
+- [`.dockerignore`](portofolio-app/.dockerignore)
+
+### Construire l'image
+
+Depuis la racine du repository :
+
+```bash
+docker build -t portofolio-app ./portofolio-app
+```
+
+### Lancer le conteneur
+
+```bash
+docker run --rm -p 8080:8080 portofolio-app
+```
+
+Application disponible ensuite sur `http://localhost:8080/`.
+
 ## Donnees de contenu
 
 Le contenu principal du portfolio est gère localement :
