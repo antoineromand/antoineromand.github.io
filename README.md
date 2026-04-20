@@ -1,59 +1,111 @@
-# PortofolioApp
+# Portfolio App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+Application portfolio personnelle développée avec Angular 20, SCSS et Tailwind CSS 4.
 
-## Development server
+Le projet présente un profil de développeur backend oriente Java/Spring, une page de projets alimentée par des donnees
+locales, une page "about" avec experiences et competences, ainsi qu'une page de contact avec formulaire Angular.
 
-To start a local development server, run:
+## Apercu
 
-```bash
-ng serve
+L'application est structurée autour de 4 routes principales :
+
+- `/` : page d'accueil
+- `/projects` : liste des projets avec filtre et pagination
+- `/about` : presentation, competences et experiences
+- `/contact` : formulaire de contact avec dialogue de redirection vers LinkedIn
+
+## Stack technique
+
+- Angular 20 en mode standalone
+- Angular Router
+- Reactive Forms
+- SCSS
+- Tailwind CSS 4
+- Jasmine + Karma pour les tests
+- ESLint + angular-eslint
+- Prettier pour le formatage
+
+## Fonctionnalites
+
+- Navigation simple entre les sections du portfolio
+- Chargement des projets depuis [`src/projects.json`](portofolio-app/src/projects.json)
+- Chargement du contenu de presentation depuis [`src/about.json`](portofolio-app/src/about.json)
+- Filtrage des projets par mots-cles sur les tags
+- Tri des projets par identifiant
+- Pagination cote client sur la page projets
+- Formulaire de contact avec validations Angular
+
+## Limitation actuelle
+
+Le formulaire de contact ne transmet pas encore de message vers un backend ou un service externe. Lorsqu'il est valide,
+il ouvre un dialogue qui invite l'utilisateur à contacter le proprietaire du portfolio sur LinkedIn.
+
+## Structure utile
+
+```text
+src/
+  app/
+    components/
+      core/
+      reusable/
+    pages/
+      home/
+      projects/
+      about/
+      contact/
+    services/
+  about.json
+  projects.json
+public/
+  prank.gif
+  doc-202604-ar.pdf
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Demarrage local
 
-## Code scaffolding
+### Prerequis
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js recent
+- npm
+- Angular CLI via les scripts npm du projet
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Installation
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+### Lancer le projet
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Application disponible ensuite sur `http://localhost:4200/`.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Scripts disponibles
 
 ```bash
-ng test
+npm start    # lance le serveur de developpement
+npm run build
+npm run watch
+npm run test
+npm run lint
+npm run format
 ```
 
-## Running end-to-end tests
+## Donnees de contenu
 
-For end-to-end (e2e) testing, run:
+Le contenu principal du portfolio est gère localement :
 
-```bash
-ng e2e
-```
+- [`src/about.json`](portofolio-app/src/about.json) : description, competences, experiences
+- [`src/projects.json`](portofolio-app/src/projects.json) : projets, categories, statuts, tags, illustrations
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Modifier ces fichiers suffit pour mettre a jour une grande partie du site sans toucher aux composants Angular.
 
-## Additional Resources
+## Pistes d'amelioration
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Connecter le formulaire de contact a un vrai service d'envoi
+- Ajouter des tests supplementaires sur les composants interactifs
+- Remplacer certaines ressources distantes d'images par des assets maitrises localement
+- Ajouter une section de deploiement selon la plateforme cible
