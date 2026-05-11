@@ -3,45 +3,66 @@
     {
       "id": 1,
       "category": "backend",
-      "title": "Neo-Ledger",
-      "description": "NeoLedger est un système de gestion de transactions financières distribué.\n Ce projet a pour but de mettre en pratique des concepts métiers et de simuler une banque.",
-      "tags": [
-        "JAVA",
-        "SPRING",
-        "KAFKA"
-      ],
-      "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ_MQlv6kK2EWiD48KlM33C4I0Ftt9Ix88s8Mxsl3rCkQYKZST0JcQDHOxeRF6uUQnGYKd9ui5F9rhOiFeBlJsJXvjv_SYCAwKenlhQs-eKnw03_Z1nBL1zfiA85mtJ8RrsrsNpXZoRvWFhtRBS25Jc9TcxMiDo1hqqAlu_i4akSGRQnSHz8hI5AISrDVQ11v_sLvGw7vZPqAuYXkJAgG1g7-m1yX8UeFzuVQ0VIkH4HGRADxYZLOFn0BdsgvodurDz3TwMYU0MfA",
+      "title": "NeoLedger",
+      "description": "Système distribué de gestion de transactions financières construit avec Java 21, Spring Boot 3.4 et Apache Kafka. Le projet est découpé en modules Gradle pour séparer clairement le domaine métier, les messages partagés et la logique de transaction.",
+      "tags": ["JAVA", "SPRING BOOT", "KAFKA", "PROTOBUF", "TESTCONTAINERS", "GRADLE"],
+      "githubUrl": "https://github.com/antoineromand/neo-ledger",
+      "img": "",
       "year": 2026,
       "status": "ongoing"
     },
     {
       "id": 2,
       "category": "backend",
-      "title": "Click And Eat Api",
-      "description": "Click and Eat est un api venant d'un projet entrepreneurial mis en pause.\n Développé avec Java et sous une architecture monolithique modulaire pour faciliter une transition vers les microservices, ce projet s'inscrit dans une démarche de ma part de comprendre et mettre en place la dite architecture.",
-      "tags": [
-        "JAVA",
-        "SPRING",
-        "POSTGRESQL",
-        "MONOLITH MODULAIRE"
-      ],
-      "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq9i4LoCvWZSX1TdIIau3cD2u2HKoje1vKxFg2sTjXu5rQ-WE_l3cMf9nPDFBHhEsFMlYL75bVxsuSJvQadDM2ABKtLrRSGlQlHEYhepF_1J5wulhfCCiX2HaehuElwWSAgFjjAG9skdbcnJD-a5VK--TrVpg7a_tE6fVbUDU7VDCzr7XQKeboCM7GzLzSx0aRhC48NMcppCoKLjCLGUPezr_opLz5Qqg3eCaSuSsOhalm_FLtU2kuvxaAajv8Ilg5R4nIOu7DRmg",
+      "title": "Click and Eat API",
+      "description": "API REST monolithique modulaire conçue autour d'une approche Domain-Driven Design pour gérer les fonctionnalités d'une application de commande alimentaire. Le projet repose sur PostgreSQL, Docker, Dragonfly et une authentification JWT.",
+      "tags": ["JAVA", "SPRING BOOT", "DDD", "POSTGRESQL", "DOCKER", "JWT"],
+      "githubUrl": "https://github.com/antoineromand/click-and-eat-api",
+      "img": "",
       "year": 2025,
       "status": "aborted"
     },
     {
       "id": 3,
+      "category": "backend",
+      "title": "CashManager API",
+      "description": "API NestJS construite comme un monolithe modulaire avec TypeORM, MySQL, JWT et AdminJS. Le projet met l'accent sur la séparation des responsabilités et une base serveur maintenable.",
+      "tags": ["NESTJS", "TYPESCRIPT", "TYPEORM", "MYSQL", "JWT", "ADMINJS"],
+      "githubUrl": "https://github.com/antoineromand/CashManager-Api",
+      "img": "",
+      "year": 2025,
+      "status": "completed"
+    },
+    {
+      "id": 4,
       "category": "full-stack",
-      "title": "PictsManager",
-      "description": "Plateforme de partage d'images dans le style d'Instagram.\n Projet Epitech datant de 2024, modernisé en 2026 (montée de version Java, implémentation DDD, S3, CDN..). Une interface web avec angular a été développé en 2026 pour remplacer l'ancienne application obsolète développé sous react native.",
-      "tags": [
-        "JAVA",
-        "SPRING",
-        "ANGULAR",
-        "CDN",
-        "DDD"
-      ],
-      "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq9i4LoCvWZSX1TdIIau3cD2u2HKoje1vKxFg2sTjXu5rQ-WE_l3cMf9nPDFBHhEsFMlYL75bVxsuSJvQadDM2ABKtLrRSGlQlHEYhepF_1J5wulhfCCiX2HaehuElwWSAgFjjAG9skdbcnJD-a5VK--TrVpg7a_tE6fVbUDU7VDCzr7XQKeboCM7GzLzSx0aRhC48NMcppCoKLjCLGUPezr_opLz5Qqg3eCaSuSsOhalm_FLtU2kuvxaAajv8Ilg5R4nIOu7DRmg",
+      "title": "Cryptoviz",
+      "description": "Monorepo Big Data regroupant une API et une application front. Le projet sert de terrain d'expérimentation pour des pipelines de traitement de données et une architecture découpée en plusieurs applications.",
+      "tags": ["BIG DATA", "MONOREPO", "API", "APP", "TYPESCRIPT"],
+      "githubUrl": "https://github.com/antoineromand/Cryptoviz",
+      "img": "",
+      "year": 2024,
+      "status": "ongoing"
+    },
+    {
+      "id": 5,
+      "category": "backend",
+      "title": "PictsManager API",
+      "description": "Back-end de la plateforme PictsManager, une application de partage d'images inspirée d'Instagram. Le projet a été modernisé avec une montée de version Java, une approche DDD, du stockage S3 et l'utilisation d'un CDN.",
+      "tags": ["JAVA", "SPRING BOOT", "DDD", "S3", "CDN", "POSTGRESQL"],
+      "githubUrl": "https://github.com/antoineromand/PictsManager-Api",
+      "img": "",
+      "year": 2026,
+      "status": "completed"
+    },
+    {
+      "id": 6,
+      "category": "full-stack",
+      "title": "PictsManager Web UI",
+      "description": "Interface web Angular de PictsManager, pensée pour remplacer l'ancienne application mobile devenue obsolète. Le front a été modernisé pour accompagner le back-end et proposer une expérience plus propre et plus maintenable.",
+      "tags": ["ANGULAR", "TYPESCRIPT", "TAILWIND CSS", "WEB", "UI"],
+      "githubUrl": "https://github.com/antoineromand/pictsmanager-web-ui",
+      "img": "",
       "year": 2026,
       "status": "completed"
     }

@@ -8,6 +8,7 @@ export interface Project {
   category: string;
   img: string;
   tags: string[];
+  githubUrl: string;
   year: number;
   status: string;
 }
