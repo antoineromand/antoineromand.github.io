@@ -1,9 +1,9 @@
 {
   "quote": [
-    "Développeur et architecte,",
-    "Brad Pitt pour Anne"
+    "Développeur backend et architecte logiciel,",
+    "attaché aux systèmes propres, lisibles et durables"
   ],
-  "description": "Je m'appelle Antoine et je suis développeur. Orienté backend mais appréciant également Angular, je me spécialise dans l'écosystème Java et Spring.\n J'ai été formé à Epitech et j'ai obtenu mon équivalent Master 2. Je suis également un homme expérimenté, puisque j'ai pu réaliser une première expérience professionnelle durant mes études. J'ai été alternant à TravelJuice (développeur full-stack Angular / nestJs).  \n Je suis un architecte logiciel et développeur d'applications d'après mon diplôme. \n J'accorde beaucoup d'importance à la qualité du code mais également à la qualité structurelle de mes applications. \n Si jamais vous souhaitez échanger avec moi pour diverses raisons, veuillez me contacter sur mes réseaux ou par formulaire.",
+  "description": "Je m'appelle Antoine et je suis développeur backend, avec un intérêt marqué pour Angular. Je travaille principalement avec Java et Spring, dans des contextes où la qualité du code et la structure globale comptent autant que la fonctionnalité.\n\nJ'ai été formé à Epitech, où j'ai obtenu un équivalent Master 2. J'y ai aussi réalisé une première expérience professionnelle en alternance chez TravelJuice, sur un poste de développeur full-stack Angular / NestJS.\n\nJe suis diplômé en architecture logicielle et développement d'applications. J'aime concevoir des systèmes lisibles, cohérents et maintenables.\n\nSi vous souhaitez échanger avec moi, vous pouvez me contacter via mes réseaux ou par le formulaire du site.",
   "skills": [
     "Java",
     "Spring",
@@ -27,7 +27,7 @@
       "contract": "année de césure",
       "date": "09/2024 - 03/2026",
       "location": "---",
-      "position": "Vagabond",
+      "position": "Développeur indépendant",
       "stack": [
         "Java",
         "Spring Boot",
@@ -41,14 +41,14 @@
         "..."
       ],
       "tasks": [
-        "Développement d’applications backend en Java (Spring Boot) avec conception d’API REST",
-        "Mise en place d’architectures microservices et communications asynchrones via Kafka",
-        "Implémentation de bonnes pratiques : Clean Architecture, DDD, TDD",
+        "Développement d'applications back-end en Java avec Spring Boot et conception d'API REST",
+        "Mise en place d'architectures microservices et de communications asynchrones via Kafka",
+        "Application de pratiques d'architecture et de qualité logicielle comme Clean Architecture, DDD et TDD",
         "Mise en place de pipelines CI/CD avec GitHub Actions",
         "Conteneurisation des applications avec Docker et Docker Compose",
-        "Développement frontend avec Angular (Signals, Leaflet, Tailwind)",
-        "[Septembre-Décembre 2024]Voyage en autonomie au Japon, développement de l’adaptabilité et ouverture culturelle",
-        "[Septembre-Décembre 2025]Perfectionnement en anglais (Wall Street English) avec obtention du TOEIC : 945/990"
+        "Développement front-end avec Angular, Signals, Leaflet et Tailwind",
+        "Voyage en autonomie au Japon entre septembre et décembre 2024, avec un travail sur l'adaptabilité et l'ouverture culturelle",
+        "Perfectionnement de l'anglais en 2025 via Wall Street English, avec obtention du TOEIC : 945/990"
       ]
     },
     {
@@ -56,7 +56,7 @@
       "contract": "alternance",
       "date": "02/2022 - 08/2024",
       "location": "Valbonne, France",
-      "position": "développeur full-stack",
+      "position": "Développeur full-stack",
       "stack": [
         "Node.js",
         "NestJS",
@@ -73,10 +73,10 @@
         "Participation à la migration de services monolithiques vers une architecture orientée services (Node.js / NestJS)",
         "Participation à la refonte du back-office en Angular 14",
         "Optimisation du schéma relationnel et mise en place de scripts de migration automatisés",
-        "Conception d’un système de CRUD générique piloté par les entités ORM (backend & frontend)",
-        "Implémentation de règles métier (ex: éco-critères), amélioration du moteur de recherche",
-        "Rédaction de documentation technique et application des principes Clean Code / SOLID",
-        "Gestion du versioning et des déploiements (staging / production) via Jenkins et Portainer",
+        "Conception d'un système de CRUD générique piloté par les entités ORM, côté back-end comme côté front-end",
+        "Implémentation de règles métier, notamment les éco-critères, et amélioration du moteur de recherche",
+        "Rédaction de documentation technique et application des principes Clean Code et SOLID",
+        "Gestion du versioning et des déploiements, en staging comme en production, via Jenkins et Portainer",
         "Mentorat technique de deux alternants",
         "Animation ponctuelle des rituels Scrum (Daily) en relais du Tech Lead"
       ]

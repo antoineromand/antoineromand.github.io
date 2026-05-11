@@ -4,15 +4,25 @@
   margin-top: 3rem;
   gap: 3.5rem;
   justify-content: center;
-  height: 320px;
+  min-height: 320px;
+  align-items: flex-start;
 
   .project-id {
     font-family: 'JetBrains Mono', monospace !important;
     font-size: 18px;
     opacity: 0.5;
+    flex: 0 0 auto;
   }
 
   .picture {
+    flex: 0 0 auto;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     div {
       display: flex;
       flex-direction: column;
@@ -53,6 +63,7 @@
     .project-tags {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       gap: 1rem;
 
       span {
@@ -86,14 +97,58 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .body-container {
+    gap: 2.5rem;
+
+    .project-metadata {
+      width: 38%;
+
+      .project-title {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 711px) {
   .body-container {
     flex-direction: column !important;
-    height: 100% !important;
+    min-height: 100% !important;
+    gap: 1.5rem;
+    align-items: stretch;
+
+    .project-id {
+      font-size: 16px;
+    }
+
+    .picture {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+      }
+
+      .absolute {
+        padding: 1rem;
+        width: min(13rem, 70%);
+      }
+    }
   }
 
-  .project-metadata {
+  .body-container .project-metadata {
     width: 100% !important;
+
+    .project-title {
+      font-size: 1.6rem !important;
+    }
+
+    .project-description {
+      max-height: none;
+    }
   }
 }
 
