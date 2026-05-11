@@ -7,7 +7,7 @@
       "description": "Système distribué de gestion de transactions financières construit avec Java 21, Spring Boot 3.4 et Apache Kafka. Le projet est découpé en modules Gradle pour séparer clairement le domaine métier, les messages partagés et la logique de transaction.",
       "tags": ["JAVA", "SPRING BOOT", "KAFKA", "PROTOBUF", "TESTCONTAINERS", "GRADLE"],
       "githubUrl": "https://github.com/antoineromand/neo-ledger",
-      "img": "",
+      "img": "/project-images/neo-ledger.svg",
       "year": 2026,
       "status": "ongoing"
     },
@@ -18,7 +18,7 @@
       "description": "API REST monolithique modulaire conçue autour d'une approche Domain-Driven Design pour gérer les fonctionnalités d'une application de commande alimentaire. Le projet repose sur PostgreSQL, Docker, Dragonfly et une authentification JWT.",
       "tags": ["JAVA", "SPRING BOOT", "DDD", "POSTGRESQL", "DOCKER", "JWT"],
       "githubUrl": "https://github.com/antoineromand/click-and-eat-api",
-      "img": "",
+      "img": "/project-images/click-and-eat-api.svg",
       "year": 2025,
       "status": "aborted"
     },
@@ -29,7 +29,7 @@
       "description": "API NestJS construite comme un monolithe modulaire avec TypeORM, MySQL, JWT et AdminJS. Le projet met l'accent sur la séparation des responsabilités et une base serveur maintenable.",
       "tags": ["NESTJS", "TYPESCRIPT", "TYPEORM", "MYSQL", "JWT", "ADMINJS"],
       "githubUrl": "https://github.com/antoineromand/CashManager-Api",
-      "img": "",
+      "img": "/project-images/cashmanager-api.svg",
       "year": 2025,
       "status": "completed"
     },
@@ -40,7 +40,7 @@
       "description": "Monorepo Big Data regroupant une API et une application front. Le projet sert de terrain d'expérimentation pour des pipelines de traitement de données et une architecture découpée en plusieurs applications.",
       "tags": ["BIG DATA", "MONOREPO", "API", "APP", "TYPESCRIPT"],
       "githubUrl": "https://github.com/antoineromand/Cryptoviz",
-      "img": "",
+      "img": "/project-images/cryptoviz.svg",
       "year": 2024,
       "status": "ongoing"
     },
@@ -51,7 +51,7 @@
       "description": "Back-end de la plateforme PictsManager, une application de partage d'images inspirée d'Instagram. Le projet a été modernisé avec une montée de version Java, une approche DDD, du stockage S3 et l'utilisation d'un CDN.",
       "tags": ["JAVA", "SPRING BOOT", "DDD", "S3", "CDN", "POSTGRESQL"],
       "githubUrl": "https://github.com/antoineromand/PictsManager-Api",
-      "img": "",
+      "img": "/project-images/pictsmanager-api.svg",
       "year": 2026,
       "status": "completed"
     },
@@ -62,7 +62,7 @@
       "description": "Interface web Angular de PictsManager, pensée pour remplacer l'ancienne application mobile devenue obsolète. Le front a été modernisé pour accompagner le back-end et proposer une expérience plus propre et plus maintenable.",
       "tags": ["ANGULAR", "TYPESCRIPT", "TAILWIND CSS", "WEB", "UI"],
       "githubUrl": "https://github.com/antoineromand/pictsmanager-web-ui",
-      "img": "",
+      "img": "/project-images/pictsmanager-web-ui.svg",
       "year": 2026,
       "status": "completed"
     }

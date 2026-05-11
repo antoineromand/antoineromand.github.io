@@ -1,0 +1,24 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1B1E"/>
+      <stop offset="1" stop-color="#23424D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="340" y1="200" x2="1260" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB86B"/>
+      <stop offset="1" stop-color="#7CF0C1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1230" cy="250" r="240" fill="#7CF0C1" fill-opacity="0.14"/>
+  <circle cx="350" cy="710" r="200" fill="#FFB86B" fill-opacity="0.1"/>
+  <rect x="190" y="180" width="1220" height="540" rx="48" fill="#F5F1E8" fill-opacity="0.04" stroke="#F5F1E8" stroke-opacity="0.12"/>
+  <g fill="#F5F1E8" fill-opacity="0.08">
+    <rect x="300" y="250" width="360" height="420" rx="34"/>
+    <rect x="700" y="250" width="420" height="220" rx="34"/>
+    <rect x="700" y="500" width="420" height="170" rx="34"/>
+  </g>
+  <path d="M360 330H560M360 380H520M760 330H1020M760 380H960M760 560H1040" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 18"/>
+  <text x="800" y="455" text-anchor="middle" fill="#F5F1E8" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="700" letter-spacing="3">PICTSMANAGER</text>
+  <text x="800" y="510" text-anchor="middle" fill="#F5F1E8" fill-opacity="0.72" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="6">WEB UI</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="140" y1="100" x2="1460" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#3A1F5D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="260" y1="220" x2="1340" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1220" cy="260" r="260" fill="#8B5CF6" fill-opacity="0.14"/>
+  <circle cx="360" cy="680" r="220" fill="#22D3EE" fill-opacity="0.08"/>
+  <rect x="190" y="180" width="1220" height="540" rx="48" fill="#F5F1E8" fill-opacity="0.04" stroke="#F5F1E8" stroke-opacity="0.12"/>
+  <g opacity="0.85" stroke="url(#accent)" stroke-width="6" stroke-linecap="round">
+    <path d="M300 560L470 470L640 520L820 380L1020 430L1290 300"/>
+    <path d="M300 630L470 540L640 590L820 450L1020 500L1290 370" stroke-opacity="0.45"/>
+  </g>
+  <g fill="#F5F1E8" fill-opacity="0.08">
+    <rect x="320" y="250" width="230" height="140" rx="26"/>
+    <rect x="610" y="250" width="230" height="140" rx="26"/>
+    <rect x="900" y="250" width="230" height="140" rx="26"/>
+    <rect x="1190" y="250" width="110" height="140" rx="26"/>
+  </g>
+  <text x="800" y="455" text-anchor="middle" fill="#F5F1E8" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="3">CRYPTOVIZ</text>
+  <text x="800" y="510" text-anchor="middle" fill="#F5F1E8" fill-opacity="0.72" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="7">BIG DATA</text>
+</svg>

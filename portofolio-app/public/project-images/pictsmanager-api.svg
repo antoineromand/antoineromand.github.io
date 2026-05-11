@@ -1,0 +1,26 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1728"/>
+      <stop offset="1" stop-color="#2B3A67"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="360" y1="220" x2="1240" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A5B"/>
+      <stop offset="1" stop-color="#8DD3FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1230" cy="260" r="250" fill="#8DD3FF" fill-opacity="0.12"/>
+  <circle cx="360" cy="700" r="220" fill="#FF8A5B" fill-opacity="0.1"/>
+  <rect x="200" y="170" width="1200" height="560" rx="48" stroke="#F5F1E8" stroke-opacity="0.13" stroke-width="2"/>
+  <g fill="#F5F1E8" fill-opacity="0.08">
+    <rect x="300" y="260" width="200" height="200" rx="32"/>
+    <rect x="540" y="260" width="200" height="200" rx="32"/>
+    <rect x="780" y="260" width="200" height="200" rx="32"/>
+    <rect x="1020" y="260" width="200" height="200" rx="32"/>
+    <rect x="420" y="510" width="760" height="90" rx="28"/>
+  </g>
+  <path d="M400 360H1200" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 18"/>
+  <text x="800" y="450" text-anchor="middle" fill="#F5F1E8" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="700" letter-spacing="3">PICTSMANAGER API</text>
+  <text x="800" y="505" text-anchor="middle" fill="#F5F1E8" fill-opacity="0.72" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="6">IMAGE PLATFORM BACKEND</text>
+</svg>
