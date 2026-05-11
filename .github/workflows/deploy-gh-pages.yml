@@ -18,6 +18,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portofolio-app
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,12 +30,13 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: portofolio-app/package-lock.json
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build app
-        run: npx ng build --configuration production --base-href /${{ github.event.repository.name }}/
+        run: npx ng build --configuration production --base-href /portfolio/
 
       - name: Copy 404 fallback
         run: cp dist/portofolio-app/browser/index.html dist/portofolio-app/browser/404.html
@@ -40,7 +44,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/portofolio-app/browser
+          path: portofolio-app/dist/portofolio-app/browser
 
   deploy:
     needs: build
