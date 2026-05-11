@@ -1,35 +1,42 @@
-<div class="body-container flex" [ngClass]="isEven(project().id) ? 'flex-row-reverse' : 'flex-row'">
+<div class="body-container flex" [class.even]="shouldReverse(displayIndex())">
   <div class="project-id">{{ project().id | idFormatter }}</div>
-  <div class="relative overflow-hidden picture">
-    <img
-      [src]="project().img.length === 0 ? defaultImgSrc : project().img"
-      alt="t"
-      class="w-142 h-80 object-cover"
-    />
-    <div
-      class="absolute -bottom-2 bg-[#faf9f6] p-8 uppercase w-50"
-      [ngClass]="[project().status, isEven(project().id) ? 'right-0' : 'left-0']"
-    >
-      <span class="text-sm">status : {{ status() }}</span>
-      <span class="text-sm">année : {{ project().year }}</span>
+
+  <div class="project-layout">
+    <div class="relative overflow-hidden picture">
+      <img
+        [src]="project().img.length === 0 ? defaultImgSrc : project().img"
+        alt="t"
+        class="w-142 h-80 object-cover"
+      />
+      <div
+        class="absolute -bottom-2 bg-[#faf9f6] p-8 uppercase w-50"
+        [ngClass]="[
+          project().status,
+          shouldReverse(displayIndex()) ? 'right-0' : 'left-0'
+        ]"
+      >
+        <span class="text-sm">status : {{ status() }}</span>
+        <span class="text-sm">année : {{ project().year }}</span>
+      </div>
     </div>
-  </div>
-  <div class="project-metadata">
-    <span class="project-category">{{ project().category }}</span>
-    <span class="project-title">{{ project().title }}</span>
-    <p class="project-description">{{ project().description }}</p>
-    <div class="project-tags">
-      @for (tag of project().tags; track tag) {
-        <span class="tag">{{ tag }}</span>
-      }
+
+    <div class="project-metadata">
+      <span class="project-category">{{ project().category }}</span>
+      <span class="project-title">{{ project().title }}</span>
+      <p class="project-description">{{ project().description }}</p>
+      <div class="project-tags">
+        @for (tag of project().tags; track tag) {
+          <span class="tag">{{ tag }}</span>
+        }
+      </div>
+      <a
+        [href]="project().githubUrl"
+        target="_blank"
+        rel="noreferrer"
+        class="project-link"
+      >
+        Voir sur GitHub
+      </a>
     </div>
-    <a
-      [href]="project().githubUrl"
-      target="_blank"
-      rel="noreferrer"
-      class="project-link"
-    >
-      Voir sur GitHub
-    </a>
   </div>
 </div>
