@@ -33,7 +33,7 @@ jobs:
           cache-dependency-path: portofolio-app/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build app
         run: npx ng build --configuration production --base-href /portfolio/
