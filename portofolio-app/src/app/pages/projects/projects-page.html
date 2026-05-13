@@ -9,7 +9,7 @@
       N'hésitez pas à consulter chaque dépôt sur GitHub.
     </p>
   </div>
-  <app-projects-filter (filterOutputEvent)="getFilters($event)" )></app-projects-filter>
+  <app-projects-filter (filterOutputEvent)="getFilters($event)"></app-projects-filter>
   @for (project of projects(); track project.id; let index = $index) {
     <app-project [project]="project" [displayIndex]="index"></app-project>
   }
