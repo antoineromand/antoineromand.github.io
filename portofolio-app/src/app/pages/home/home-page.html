@@ -1,6 +1,34 @@
 <div class="home-container">
-  <div class="home-title">
-    <h1 class="home-title-main">Développeur backend</h1>
-    <h1 class="home-title-sub">Java, Spring et Angular</h1>
+  <div class="hero-card">
+    <p class="eyebrow">Portfolio / Développeur backend</p>
+    <div class="home-title">
+      <h1 class="home-title-main">Antoine Romand</h1>
+      <h2 class="home-title-sub">Java, Spring et Angular</h2>
+    </div>
+    <p class="hero-copy">
+      Je conçois des applications backend robustes, des interfaces lisibles et des systèmes
+      pensés pour durer. L’objectif est simple: livrer du propre, du maintenable et du
+      professionnel.
+    </p>
+
+    <div class="hero-actions">
+      <a class="primary-action" [routerLink]="['/projects']">Voir les projets</a>
+      <a class="secondary-action" [routerLink]="['/contact']">Me contacter</a>
+    </div>
+
+    <div class="hero-metrics">
+      <div>
+        <span class="metric-value">Backend</span>
+        <span class="metric-label">architecture, APIs, performance</span>
+      </div>
+      <div>
+        <span class="metric-value">Frontend</span>
+        <span class="metric-label">interfaces Angular claires et soignées</span>
+      </div>
+      <div>
+        <span class="metric-value">Delivery</span>
+        <span class="metric-label">qualité de code, lisibilité, fiabilité</span>
+      </div>
+    </div>
   </div>
 </div>

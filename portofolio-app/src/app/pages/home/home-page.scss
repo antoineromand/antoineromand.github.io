@@ -1,75 +1,158 @@
 @use 'variables' as *;
 
 .home-container {
-  padding: 3rem;
+  min-height: calc(100dvh - 12rem);
+  padding: 1.5rem 0 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  .home-title {
-    margin-top: 15%;
-    text-align: center;
+  justify-content: center;
+
+  .hero-card {
+    width: min(100%, 980px);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid $border-color;
+    border-radius: 2rem;
+    background: rgba(255, 253, 249, 0.78);
+    box-shadow: $shadow-color;
+    backdrop-filter: blur(18px);
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
-    .home-title-main {
-      font-weight: 300;
-      font-size: 64px;
-      font-family: 'Noto Serif', sans-serif;
-      color: $red-color;
+    color: $muted-ink;
+  }
+
+  .home-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: left;
+  }
+
+  .home-title-main,
+  .home-title-sub {
+    margin: 0;
+    max-width: 12ch;
+    font-family: 'Noto Serif', serif;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+  }
+
+  .home-title-main {
+    font-size: clamp(3rem, 7vw, 6rem);
+    color: $ink-color;
+  }
+
+  .home-title-sub {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    color: $red-color;
+  }
+
+  .hero-copy {
+    width: min(100%, 58ch);
+    margin: 1.5rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $muted-ink;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0 1.1rem;
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
     }
 
-    .home-title-sub {
-      font-weight: 500;
-      font-size: 64px;
-      font-family: 'Noto Serif', sans-serif;
-      opacity: 0.7;
+    .primary-action {
+      background: $ink-color;
+      color: #fff;
+      border: 1px solid $ink-color;
+
+      &:hover {
+        background: $red-color;
+        border-color: $red-color;
+      }
+    }
+
+    .secondary-action {
+      background: rgba(255, 255, 255, 0.75);
+      color: $ink-color;
+      border: 1px solid $border-color;
+    }
+  }
+
+  .hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+
+    > div {
+      padding: 1rem 1rem 1.1rem;
+      border: 1px solid $border-color;
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.56);
+    }
+  }
+
+  .metric-value {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.15rem;
+    color: $ink-color;
+  }
+
+  .metric-label {
+    display: block;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: $muted-ink;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    min-height: auto;
+    padding: 1rem 0 2rem;
+
+    .hero-card {
+      border-radius: 1.5rem;
     }
 
     .home-title-main,
     .home-title-sub {
       max-width: 100%;
-      word-break: break-word;
-    }
-  }
-
-  h3 {
-    font-weight: 300;
-    opacity: 0.5;
-    font-family: 'Walter Turncoat', cursive !important;
-  }
-}
-
-@media (max-width: 573px) {
-  .home-container {
-    padding: 3rem;
-    font-family: 'Noto Serif', serif;
-    text-transform: uppercase;
-    text-align: center;
-
-    .home-title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .home-title-main {
-        font-weight: 800;
-        font-size: 36px;
-      }
-
-      .home-title-sub {
-        font-weight: 100;
-        font-size: 32px;
-      }
-
-      .home-title-main,
-      .home-title-sub {
-        max-width: 100%;
-        word-break: break-word;
-      }
     }
 
-    h3 {
-      font-weight: 300;
-      opacity: 0.5;
+    .hero-metrics {
+      grid-template-columns: 1fr;
     }
   }
 }

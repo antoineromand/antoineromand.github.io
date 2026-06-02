@@ -7,19 +7,21 @@
   "skills": [
     "Java",
     "Spring",
+    "NodeJs",
+    "NestJs",
+    "Angular",
+    "Docker",
+    "PostgreSQL",
+    "MariaDB",
+    "MongoDB",
     "JUnit",
     "Mockito",
     "Testcontainers",
     "Clean Code",
     "SOLID",
     "TDD",
-    "NestJS",
-    "Angular",
     "GraphQL",
-    "Docker",
-    "Git",
-    "PostgreSQL",
-    "..."
+    "Git"
   ],
   "experiences": [
     {

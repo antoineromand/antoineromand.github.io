@@ -1,0 +1,116 @@
+@use 'variables' as *;
+
+.experience {
+  padding: 1.4rem 1.4rem 1.3rem;
+  border: 1px solid $border-color;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 14px 34px rgba(17, 19, 26, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.experience-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(17, 19, 26, 0.08);
+}
+
+.experience-date,
+.experience-location {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $muted-ink;
+}
+
+.experience-main {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-heading {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.experience-position {
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.05;
+  color: $ink-color;
+}
+
+.experience-meta {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $muted-ink;
+}
+
+.experience-stacks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.experience-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.1rem;
+  padding: 0 0.7rem;
+  border-radius: 9999px;
+  border: 1px solid $border-color;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.experience-chip.is-strong {
+  background: rgba(17, 19, 26, 0.92);
+  color: #fff;
+}
+
+.experience-chip.is-soft {
+  background: rgba(255, 255, 255, 0.8);
+  color: $muted-ink;
+}
+
+.experience-tasks {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-task {
+  display: flex;
+  gap: 0.7rem;
+  line-height: 1.75;
+  color: $muted-ink;
+
+  .bullet {
+    color: $red-color;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience {
+    padding: 1.15rem;
+  }
+
+  .experience-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

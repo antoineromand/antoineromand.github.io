@@ -1,20 +1,23 @@
-<div class="home-container h-full">
-  <div class="flex flex-col justify-items-start contact-title">
+<div class="contact-container">
+  <section class="contact-title">
+    <p class="eyebrow">Contact</p>
     <h1>Restons en contact</h1>
     <small>Un projet, une opportunité ou une discussion technique ? Écrivez-moi.</small>
-  </div>
-  <div class="contact-form relative">
+    <div class="contact-points">
+      <span>Réponse rapide</span>
+      <span>Échanges clairs</span>
+      <span>Projets sérieux</span>
+    </div>
+  </section>
+
+  <section class="contact-form">
     <form
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
       class="form"
     >
-
-      <div class="group ">
-        <label
-          class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
-             group-focus-within:text-[#ba002c] transition font-bold" for="name"
-        >
+      <div class="group">
+        <label class="field-label" for="name">
           Nom
         </label>
 
@@ -23,28 +26,18 @@
           formControlName="name"
           id="name"
           placeholder="Votre nom"
-          class="bg-transparent border-0 border-b border-outline-variant/30 py-4
-             focus:outline-none focus:border-[#ba002c]
-             placeholder:opacity-20 placeholder:text-xs
-              font-mono text-sm tracking-widest
-             transition-all duration-300"
+          class="field-input"
         />
 
         @if (form.controls.name.touched && form.controls.name.invalid) {
-          <p
-            class="text-[#ba002c] text-xs mt-2 font-mono tracking-wide"
-          >
+          <p class="field-error">
             Déclinez votre identité
           </p>
         }
-
       </div>
 
       <div class="group">
-        <label
-          class="block font-mono text-[10px]  tracking-widest text-on-surface/40
-             group-focus-within:text-[#ba002c] transition font-bold uppercase" for="email"
-        >
+        <label class="field-label" for="email">
           Email
         </label>
 
@@ -53,28 +46,18 @@
           formControlName="email"
           id="email"
           placeholder="Votre email"
-          class="bg-transparent border-0 border-b border-outline-variant/30 py-4
-             focus:outline-none focus:border-[#ba002c]
-             placeholder:opacity-20 placeholder:text-xs
-             font-mono text-sm tracking-widest
-             transition-all duration-300"
+          class="field-input"
         />
 
         @if (form.controls.email.touched && form.controls.email.invalid) {
-          <p
-            class="text-[#ba002c] text-xs mt-2 font-mono tracking-wide"
-          >
+          <p class="field-error">
             Ton mail me semble louche, change le..
           </p>
         }
-
       </div>
 
       <div class="group">
-        <label
-          class="block font-mono text-[10px] uppercase tracking-widest text-on-surface/40
-             group-focus-within:text-[#ba002c] transition font-bold" for="content"
-        >
+        <label class="field-label" for="content">
           Message
         </label>
 
@@ -83,48 +66,35 @@
           formControlName="message"
           id="content"
           placeholder="Votre message"
-          class="bg-transparent border-0 border-b border-outline-variant/30 py-4
-             focus:outline-none focus:border-[#ba002c]
-             placeholder:opacity-20 placeholder:text-xs
-             font-mono text-sm tracking-widest resize-none
-             transition-all duration-300"
+          class="field-input field-textarea"
         ></textarea>
 
         @if (form.controls.message.touched && form.controls.message.invalid) {
-          <p
-            class="text-[#ba002c] text-xs mt-2 font-mono tracking-wide text-wrap"
-          >
+          <p class="field-error">
             C'est pas sensé être vide..
           </p>
         }
-
       </div>
 
       <button
         type="submit"
         [disabled]="form.invalid || isSending()"
-        class="py-4 mt-4
-             bg-black text-white
-             font-mono text-xs tracking-widest uppercase
-             transition-all duration-300
-             hover:bg-[#ba002c]
-             disabled:opacity-70 disabled:cursor-not-allowed"
+        class="submit-button"
       >
         <span>{{ isSending() ? 'Envoi...' : 'Soumettre' }}</span>
       </button>
 
       @if (submitStatus() === 'success') {
-        <p class="text-emerald-600 text-xs font-mono tracking-wide">
+        <p class="field-success">
           Message envoyé. Je te réponds dès que possible.
         </p>
       }
 
       @if (submitStatus() === 'error') {
-        <p class="text-[#ba002c] text-xs font-mono tracking-wide">
+        <p class="field-error">
           L'envoi a échoué. Vérifie la config EmailJS et réessaie.
         </p>
       }
-
     </form>
-  </div>
+  </section>
 </div>

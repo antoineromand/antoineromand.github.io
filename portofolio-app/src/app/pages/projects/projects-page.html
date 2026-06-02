@@ -1,4 +1,4 @@
-<div class="home-container flex-1 px-6 md:px-12 lg:px-20">
+<div class="projects-container">
   <div class="head-container">
     <div class="page-header">
       <span class="main-quote">Projets sélectionnés</span>
@@ -9,14 +9,22 @@
       N'hésitez pas à consulter chaque dépôt sur GitHub.
     </p>
   </div>
-  <app-projects-filter (filterOutputEvent)="getFilters($event)"></app-projects-filter>
-  @for (project of projects(); track project.id; let index = $index) {
-    <app-project [project]="project" [displayIndex]="index"></app-project>
-  }
-  <app-projects-pagination
-    [offset]="this.offset()"
-    [limit]="this.limit"
-    [total]="this.total()"
-    (updateLastIdEvent)="getPagination($event)"
-  ></app-projects-pagination>
+  <section class="projects-toolbar">
+    <app-projects-filter (filterOutputEvent)="getFilters($event)"></app-projects-filter>
+  </section>
+
+  <section class="projects-list">
+    @for (project of projects(); track project.id; let index = $index) {
+      <app-project [project]="project" [displayIndex]="index"></app-project>
+    }
+  </section>
+
+  <section class="projects-toolbar projects-pagination">
+    <app-projects-pagination
+      [offset]="this.offset()"
+      [limit]="this.limit"
+      [total]="this.total()"
+      (updateLastIdEvent)="getPagination($event)"
+    ></app-projects-pagination>
+  </section>
 </div>

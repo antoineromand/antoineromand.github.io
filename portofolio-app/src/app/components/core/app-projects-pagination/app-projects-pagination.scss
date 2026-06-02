@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+.projects-pagination {
+  .pagination-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .pagination-button,
+  .pagination-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .pagination-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: $muted-ink;
+    cursor: pointer;
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease,
+      opacity 0.25s ease;
+
+    &:hover:not(:disabled) {
+      color: $red-color;
+      transform: translateY(-1px);
+    }
+
+    &:disabled {
+      opacity: 0.28;
+      cursor: not-allowed;
+    }
+  }
+
+  .pagination-status {
+    color: $ink-color;
+    padding: 0.6rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid $border-color;
+    background: rgba(255, 255, 255, 0.62);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-pagination .pagination-row {
+    flex-direction: column;
+  }
+}

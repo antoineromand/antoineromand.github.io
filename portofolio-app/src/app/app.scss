@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+:host {
+  display: block;
+}
+
+.app-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.app-shell::before,
+.app-shell::after {
+  content: '';
+  position: fixed;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 9999px;
+  filter: blur(84px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.app-shell::before {
+  top: -10rem;
+  right: -8rem;
+  background: rgba(177, 18, 53, 0.12);
+}
+
+.app-shell::after {
+  left: -10rem;
+  bottom: -12rem;
+  background: rgba(17, 19, 26, 0.08);
+}
+
+.app-main {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}

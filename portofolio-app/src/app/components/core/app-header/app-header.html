@@ -1,8 +1,10 @@
-<header>
+<header class="site-header">
   <nav>
-    <div class="title">ANTOINE ROMAND</div>
+    <a class="title" [routerLink]="['/']">
+      ANTOINE ROMAND
+    </a>
 
-    <div class="hidden md:flex items-center gap-12 font-serif tracking-widest uppercase text-sm">
+    <div class="hidden md:flex items-center gap-12">
       <ul>
         <li>
           <a
@@ -19,8 +21,8 @@
             routerLinkActive="active-link"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            Projets</a
-          >
+            Projets
+          </a>
         </li>
         <li>
           <a
@@ -28,8 +30,8 @@
             routerLinkActive="active-link"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            Qui suis-je ?</a
-          >
+            Qui suis-je ?
+          </a>
         </li>
         <li>
           <a
@@ -37,8 +39,8 @@
             routerLinkActive="active-link"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            Contact</a
-          >
+            Contact
+          </a>
         </li>
       </ul>
     </div>
@@ -48,6 +50,7 @@
       class="md:hidden burger-btn"
       (click)="isMenuOpen = !isMenuOpen"
       aria-label="Ouvrir le menu"
+      [attr.aria-expanded]="isMenuOpen"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +77,9 @@
           (click)="closeMenu()"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
-        >Accueil</a
         >
+          Accueil
+        </a>
       </li>
       <li>
         <a
@@ -83,8 +87,9 @@
           (click)="closeMenu()"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
-        >Projets</a
         >
+          Projets
+        </a>
       </li>
       <li>
         <a
@@ -92,8 +97,9 @@
           (click)="closeMenu()"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
-        >Qui suis-je ?</a
         >
+          Qui suis-je ?
+        </a>
       </li>
       <li>
         <a
@@ -101,8 +107,9 @@
           (click)="closeMenu()"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
-        >Contact</a
         >
+          Contact
+        </a>
       </li>
     </ul>
   </div>
