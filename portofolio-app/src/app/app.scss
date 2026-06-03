@@ -5,34 +5,9 @@
 .app-shell {
   position: relative;
   min-height: 100dvh;
-  isolation: isolate;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-}
-
-.app-shell::before,
-.app-shell::after {
-  content: '';
-  position: fixed;
-  width: 28rem;
-  height: 28rem;
-  border-radius: 9999px;
-  filter: blur(72px);
-  pointer-events: none;
-  z-index: -1;
-}
-
-.app-shell::before {
-  top: -8rem;
-  right: -8rem;
-  background: rgba(105, 234, 255, 0.08);
-}
-
-.app-shell::after {
-  left: -10rem;
-  bottom: -10rem;
-  background: rgba(255, 94, 146, 0.08);
 }
 
 .app-main {

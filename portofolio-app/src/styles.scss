@@ -16,34 +16,11 @@ html {
 
 body {
   color: $text-color;
-  background: radial-gradient(circle at 14% 12%, rgba(105, 234, 255, 0.1), transparent 24%),
-  radial-gradient(circle at 82% 10%, rgba(255, 94, 146, 0.12), transparent 26%),
-  linear-gradient(180deg, #0a0b13 0%, #080910 100%);
+  background: #0b0d12;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 84px 84px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), transparent 88%);
-  opacity: 0.5;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at center, transparent 38%, rgba(0, 0, 0, 0.18) 100%);
-  opacity: 0.8;
 }
 
 .route-content {
