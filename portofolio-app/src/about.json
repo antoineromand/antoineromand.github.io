@@ -3,13 +3,14 @@
     "Développeur backend et architecte logiciel,",
     "attaché aux systèmes propres, lisibles et durables"
   ],
-  "description": "Je m'appelle Antoine et je suis développeur backend, avec un intérêt marqué pour Angular. Je travaille principalement avec Java et Spring, dans des contextes où la qualité du code et la structure globale comptent autant que la fonctionnalité.\n\nJ'ai été formé à Epitech, où j'ai obtenu un équivalent Master 2. J'y ai aussi réalisé une première expérience professionnelle en alternance chez TravelJuice, sur un poste de développeur full-stack Angular / NestJS.\n\nJe suis diplômé en architecture logicielle et développement d'applications. J'aime concevoir des systèmes lisibles, cohérents et maintenables.\n\nSi vous souhaitez échanger avec moi, vous pouvez me contacter via mes réseaux ou par le formulaire du site.",
+  "description": "Je m'appelle Antoine et je suis développeur backend et full stack. J'aime travailler sur des applications où la structure globale compte autant que la fonctionnalité, avec un usage quotidien de Java, Spring Boot, TypeScript, Angular, NestJS et Node.js.\n\nJ'ai été formé à Epitech, où j'ai obtenu un équivalent Master 2. J'y ai aussi réalisé une première expérience professionnelle en alternance chez TravelJuice, sur un poste de développeur full-stack Angular / NestJS.\n\nJe suis diplômé en architecture logicielle et développement d'applications. J'aime concevoir des systèmes lisibles, cohérents et maintenables, côté backend comme côté frontend.\n\nSi vous souhaitez échanger avec moi, vous pouvez me contacter via mes réseaux ou par le formulaire du site.",
   "skills": [
     "Java",
     "Spring",
-    "NodeJs",
-    "NestJs",
+    "TypeScript",
     "Angular",
+    "NestJS",
+    "Node.js",
     "Docker",
     "PostgreSQL",
     "MariaDB",
@@ -27,12 +28,15 @@
     {
       "company": "Développement personnel & projets",
       "contract": "année de césure",
-      "date": "09/2024 - 03/2026",
+      "date": "03/2025 - 03/2026",
       "location": "---",
-      "position": "Développeur indépendant",
+      "position": "Développeur backend / full stack",
       "stack": [
         "Java",
         "Spring Boot",
+        "TypeScript",
+        "Node.js",
+        "NestJS",
         "Kafka",
         "Angular",
         "Docker",
@@ -49,6 +53,8 @@
         "Mise en place de pipelines CI/CD avec GitHub Actions",
         "Conteneurisation des applications avec Docker et Docker Compose",
         "Développement front-end avec Angular, Signals, Leaflet et Tailwind",
+        "Développement backend avec Java, Spring Boot et services orientés domaine",
+        "Développement full stack avec TypeScript, Node.js et NestJS sur des projets personnels",
         "Voyage en autonomie au Japon entre septembre et décembre 2024, avec un travail sur l'adaptabilité et l'ouverture culturelle",
         "Perfectionnement de l'anglais en 2025 via Wall Street English, avec obtention du TOEIC : 945/990"
       ]

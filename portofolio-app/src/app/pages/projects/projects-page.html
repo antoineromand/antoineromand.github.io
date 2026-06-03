@@ -1,30 +1,25 @@
-<div class="projects-container">
-  <div class="head-container">
-    <div class="page-header">
-      <span class="main-quote">Projets sélectionnés</span>
-      <span class="sub-quote">Back-end, front-end et systèmes distribués</span>
-    </div>
+<section class="projects-shell">
+  <header class="projects-header">
+    <p class="eyebrow">Explorations techniques</p>
+    <h1>Prototypes, R&D et systèmes en construction.</h1>
     <p class="resume">
-      Vous retrouverez ici une sélection de projets publics représentatifs de mon travail.
-      N'hésitez pas à consulter chaque dépôt sur GitHub.
+      Une sélection de projets personnels et d’expérimentations qui illustrent mon goût pour la
+      structure, les APIs propres et les interfaces qui racontent quelque chose.
     </p>
-  </div>
-  <section class="projects-toolbar">
-    <app-projects-filter (filterOutputEvent)="getFilters($event)"></app-projects-filter>
-  </section>
+  </header>
 
-  <section class="projects-list">
+  <app-projects-filter (filterOutputEvent)="getFilters($event)"></app-projects-filter>
+
+  <div class="projects-list">
     @for (project of projects(); track project.id; let index = $index) {
       <app-project [project]="project" [displayIndex]="index"></app-project>
     }
-  </section>
+  </div>
 
-  <section class="projects-toolbar projects-pagination">
-    <app-projects-pagination
-      [offset]="this.offset()"
-      [limit]="this.limit"
-      [total]="this.total()"
-      (updateLastIdEvent)="getPagination($event)"
-    ></app-projects-pagination>
-  </section>
-</div>
+  <app-projects-pagination
+    [offset]="this.offset()"
+    [limit]="this.limit"
+    [total]="this.total()"
+    (updateLastIdEvent)="getPagination($event)"
+  ></app-projects-pagination>
+</section>

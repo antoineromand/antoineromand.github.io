@@ -1,39 +1,48 @@
-@use 'variables' as *;
-
 :host {
   display: block;
 }
 
 .app-shell {
   position: relative;
+  min-height: 100dvh;
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 
 .app-shell::before,
 .app-shell::after {
   content: '';
   position: fixed;
-  width: 34rem;
-  height: 34rem;
+  width: 28rem;
+  height: 28rem;
   border-radius: 9999px;
-  filter: blur(84px);
+  filter: blur(72px);
   pointer-events: none;
   z-index: -1;
 }
 
 .app-shell::before {
-  top: -10rem;
+  top: -8rem;
   right: -8rem;
-  background: rgba(177, 18, 53, 0.12);
+  background: rgba(105, 234, 255, 0.08);
 }
 
 .app-shell::after {
   left: -10rem;
-  bottom: -12rem;
-  background: rgba(17, 19, 26, 0.08);
+  bottom: -10rem;
+  background: rgba(255, 94, 146, 0.08);
 }
 
 .app-main {
   width: min(1180px, calc(100% - 2rem));
   margin: 0 auto;
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .app-shell {
+    padding-top: 0;
+  }
 }

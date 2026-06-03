@@ -1,14 +1,15 @@
-<div class="home-container">
+<section class="home-shell">
   <div class="hero-card">
-    <p class="eyebrow">Portfolio / Développeur backend</p>
-    <div class="home-title">
-      <h1 class="home-title-main">Antoine Romand</h1>
-      <h2 class="home-title-sub">Java, Spring et Angular</h2>
-    </div>
-    <p class="hero-copy">
+    <p class="eyebrow">Portfolio / Développeur backend & full stack</p>
+    <h1>
+      <span>Antoine Romand</span>
+      <small>Angular, NestJS, Spring Boot, Java, TypeScript</small>
+    </h1>
+    <p class="hero-text">
       Je conçois des applications backend robustes, des interfaces lisibles et des systèmes
-      pensés pour durer. L’objectif est simple: livrer du propre, du maintenable et du
-      professionnel.
+      pensés pour durer. Je travaille côté backend et full stack avec Angular, NestJS, Spring
+      Boot, Java et TypeScript, avec une attention particulière portée à la clarté et à la
+      maintenabilité.
     </p>
 
     <div class="hero-actions">
@@ -16,19 +17,36 @@
       <a class="secondary-action" [routerLink]="['/contact']">Me contacter</a>
     </div>
 
-    <div class="hero-metrics">
-      <div>
-        <span class="metric-value">Backend</span>
-        <span class="metric-label">architecture, APIs, performance</span>
-      </div>
-      <div>
-        <span class="metric-value">Frontend</span>
-        <span class="metric-label">interfaces Angular claires et soignées</span>
-      </div>
-      <div>
-        <span class="metric-value">Delivery</span>
-        <span class="metric-label">qualité de code, lisibilité, fiabilité</span>
-      </div>
+    <div class="hero-separator"></div>
+
+    <div class="hero-stats">
+      <article>
+        <span>Backend</span>
+        <p>Java, Spring Boot et NestJS pour des APIs propres.</p>
+      </article>
+      <article>
+        <span>Full stack</span>
+        <p>Angular, TypeScript et des interfaces cohérentes.</p>
+      </article>
+      <article>
+        <span>Delivery</span>
+        <p>Lisibilité, fiabilité et qualité de code.</p>
+      </article>
     </div>
   </div>
-</div>
+</section>
+
+<section class="home-highlights">
+  <article>
+    <span>Java / Spring Boot / NestJs</span>
+    <p>Des bases solides côté backend et des services qui restent lisibles.</p>
+  </article>
+  <article>
+    <span>Angular / TypeScript</span>
+    <p>Des interfaces sobres, rapides à comprendre et simples à maintenir.</p>
+  </article>
+  <article>
+    <span>TDD / DDD / CI-CD</span>
+    <p>Une approche technique orientée structure, qualité et livraison.</p>
+  </article>
+</section>

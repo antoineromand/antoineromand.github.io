@@ -1,69 +1,57 @@
 @use 'variables' as *;
 
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem 0 3rem;
-  margin: auto;
-
-  .head-container {
-    padding: clamp(1.5rem, 4vw, 2.5rem);
-    border: 1px solid $border-color;
-    border-radius: 2rem;
-    background: rgba(255, 253, 249, 0.78);
-    box-shadow: $shadow-color;
-    backdrop-filter: blur(18px);
-
-    .resume {
-      margin-top: 1rem;
-      width: min(100%, 56ch);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.98rem;
-      line-height: 1.7;
-      color: $muted-ink;
-    }
-
-    .page-header {
-      display: flex;
-      flex-direction: column;
-      font-family: 'Noto Serif', serif;
-      font-style: italic;
-      line-height: 0.95;
-
-      .sub-quote {
-        color: $red-color !important;
-        font-size: clamp(2rem, 4vw, 4rem);
-      }
-
-      .main-quote {
-        font-size: clamp(2.5rem, 5vw, 5.5rem);
-      }
-    }
-  }
-
-  .projects-toolbar {
-    padding: 1rem 1.25rem;
-    border: 1px solid $border-color;
-    border-radius: 1.5rem;
-    background: rgba(255, 253, 249, 0.72);
-    box-shadow: 0 18px 40px rgba(17, 19, 26, 0.06);
-    backdrop-filter: blur(16px);
-  }
-
-  .projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .projects-pagination {
-    margin-top: 0.25rem;
-  }
+.projects-shell {
+  width: min(1180px, calc(100% - 1.5rem));
+  margin: 1.25rem auto 0;
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 2.5rem;
 }
 
-@media (max-width: 711px) {
-  .projects-container {
-    padding: 1rem 0 2rem;
+.projects-header {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(18, 22, 39, 0.85), rgba(12, 14, 25, 0.72));
+  box-shadow: $shadow-color;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $accent-cyan;
+}
+
+.projects-header h1 {
+  margin: 0.85rem 0 0;
+  max-width: 12ch;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.resume {
+  max-width: 46rem;
+  margin: 0.9rem 0 0;
+  color: $muted-ink;
+  line-height: 1.8;
+}
+
+.projects-list {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .projects-shell {
+    width: calc(100% - 1rem);
+  }
+
+  .projects-header {
+    border-radius: 1.5rem;
   }
 }

@@ -1,116 +1,58 @@
 <header class="site-header">
-  <nav>
-    <a class="title" [routerLink]="['/']">
-      ANTOINE ROMAND
+  <nav class="site-nav">
+    <a class="brand" [routerLink]="['/']" aria-label="Retour à l'accueil">
+      <span class="brand-mark">AR</span>
+      <span class="brand-copy">
+        <span class="brand-name">Antoine Romand</span>
+        <span class="brand-role">Backend / Angular / Architecture</span>
+      </span>
     </a>
 
-    <div class="hidden md:flex items-center gap-12">
-      <ul>
-        <li>
-          <a
-            [routerLink]="['/']"
-            routerLinkActive="active-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            Accueil
-          </a>
-        </li>
-        <li>
-          <a
-            [routerLink]="['/projects']"
-            routerLinkActive="active-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            Projets
-          </a>
-        </li>
-        <li>
-          <a
-            [routerLink]="['/about']"
-            routerLinkActive="active-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            Qui suis-je ?
-          </a>
-        </li>
-        <li>
-          <a
-            [routerLink]="['/contact']"
-            routerLinkActive="active-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
+    <div class="nav-links hidden md:flex">
+      <a [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        Accueil
+      </a>
+      <a [routerLink]="['/projects']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        Projets
+      </a>
+      <a [routerLink]="['/about']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        À propos
+      </a>
+      <a [routerLink]="['/contact']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        Contact
+      </a>
     </div>
 
     <button
       type="button"
-      class="md:hidden burger-btn"
+      class="burger-btn md:hidden"
       (click)="isMenuOpen = !isMenuOpen"
-      aria-label="Ouvrir le menu"
       [attr.aria-expanded]="isMenuOpen"
+      aria-label="Ouvrir le menu"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+           class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
       </svg>
     </button>
   </nav>
 
   <div class="mobile-menu md:hidden" [class.open]="isMenuOpen">
-    <ul>
-      <li>
-        <a
-          [routerLink]="['/']"
-          (click)="closeMenu()"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Accueil
-        </a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/projects']"
-          (click)="closeMenu()"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Projets
-        </a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/about']"
-          (click)="closeMenu()"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Qui suis-je ?
-        </a>
-      </li>
-      <li>
-        <a
-          [routerLink]="['/contact']"
-          (click)="closeMenu()"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Contact
-        </a>
-      </li>
-    </ul>
+    <a [routerLink]="['/']" (click)="closeMenu()" routerLinkActive="active-link"
+       [routerLinkActiveOptions]="{ exact: true }">
+      Accueil
+    </a>
+    <a [routerLink]="['/projects']" (click)="closeMenu()" routerLinkActive="active-link"
+       [routerLinkActiveOptions]="{ exact: true }">
+      Projets
+    </a>
+    <a [routerLink]="['/about']" (click)="closeMenu()" routerLinkActive="active-link"
+       [routerLinkActiveOptions]="{ exact: true }">
+      À propos
+    </a>
+    <a [routerLink]="['/contact']" (click)="closeMenu()" routerLinkActive="active-link"
+       [routerLinkActiveOptions]="{ exact: true }">
+      Contact
+    </a>
   </div>
 </header>

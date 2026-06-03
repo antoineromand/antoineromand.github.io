@@ -1,100 +1,70 @@
-<div class="contact-container">
-  <section class="contact-title">
+<section class="contact-shell">
+  <div class="contact-intro">
     <p class="eyebrow">Contact</p>
-    <h1>Restons en contact</h1>
-    <small>Un projet, une opportunité ou une discussion technique ? Écrivez-moi.</small>
+    <h1>Restons en contact.</h1>
+    <p class="lead">
+      Un projet, une opportunité, un besoin d'échange technique ou une idée à confronter ?
+      Écris-moi et on voit comment la transformer en quelque chose de concret.
+    </p>
+
     <div class="contact-points">
-      <span>Réponse rapide</span>
-      <span>Échanges clairs</span>
-      <span>Projets sérieux</span>
+      <div>
+        <span>Réponse</span>
+        <strong>Rapide et structurée</strong>
+      </div>
+      <div>
+        <span>Cadre</span>
+        <strong>Freelance, alternance, mission</strong>
+      </div>
+      <div>
+        <span>Canal</span>
+        <strong>Mail ou formulaire</strong>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <section class="contact-form">
-    <form
-      [formGroup]="form"
-      (ngSubmit)="onSubmit()"
-      class="form"
-    >
+  <div class="contact-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-card">
       <div class="group">
-        <label class="field-label" for="name">
-          Nom
-        </label>
-
-        <input
-          type="text"
-          formControlName="name"
-          id="name"
-          placeholder="Votre nom"
-          class="field-input"
-        />
-
+        <label for="name">Nom</label>
+        <input type="text" formControlName="name" id="name" placeholder="Votre nom"/>
         @if (form.controls.name.touched && form.controls.name.invalid) {
-          <p class="field-error">
-            Déclinez votre identité
-          </p>
+          <p>Déclinez votre identité.</p>
         }
       </div>
 
       <div class="group">
-        <label class="field-label" for="email">
-          Email
-        </label>
-
-        <input
-          type="email"
-          formControlName="email"
-          id="email"
-          placeholder="Votre email"
-          class="field-input"
-        />
-
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" id="email" placeholder="Votre email"/>
         @if (form.controls.email.touched && form.controls.email.invalid) {
-          <p class="field-error">
-            Ton mail me semble louche, change le..
-          </p>
+          <p>Ton mail me semble incomplet.</p>
         }
       </div>
 
       <div class="group">
-        <label class="field-label" for="content">
-          Message
-        </label>
-
+        <label for="content">Message</label>
         <textarea
-          rows="4"
+          rows="5"
           formControlName="message"
           id="content"
           placeholder="Votre message"
-          class="field-input field-textarea"
         ></textarea>
-
         @if (form.controls.message.touched && form.controls.message.invalid) {
-          <p class="field-error">
-            C'est pas sensé être vide..
-          </p>
+          <p>Le message ne peut pas être vide.</p>
         }
       </div>
 
-      <button
-        type="submit"
-        [disabled]="form.invalid || isSending()"
-        class="submit-button"
-      >
-        <span>{{ isSending() ? 'Envoi...' : 'Soumettre' }}</span>
+      <button type="submit" [disabled]="form.invalid || isSending()">
+        {{ isSending() ? 'Envoi...' : 'Soumettre' }}
       </button>
 
       @if (submitStatus() === 'success') {
-        <p class="field-success">
-          Message envoyé. Je te réponds dès que possible.
-        </p>
+        <p class="success-message">Message envoyé. Je te réponds dès que possible.</p>
       }
 
       @if (submitStatus() === 'error') {
-        <p class="field-error">
-          L'envoi a échoué. Vérifie la config EmailJS et réessaie.
-        </p>
+        <p class="error-message">L'envoi a échoué. Vérifie la config EmailJS et réessaie.</p>
       }
     </form>
-  </section>
-</div>
+  </div>
+</section>

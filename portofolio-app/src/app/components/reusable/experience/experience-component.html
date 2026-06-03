@@ -1,21 +1,25 @@
-<article class="experience">
-  <div class="experience-top">
+<article class="experience" [class.is-last]="last()">
+  <div class="experience-rail">
     <div class="experience-date">
       {{ experience().date }}
     </div>
-    <div class="experience-location">
-      {{ experience().location | uppercase }}
-    </div>
+    <div class="experience-dot" aria-hidden="true"></div>
   </div>
 
   <div class="experience-main">
-    <div class="experience-heading">
-      <h4 class="experience-position">
-        {{ experience().position | uppercase }}
-      </h4>
-      <p class="experience-meta">
-        {{ experience().company }} · {{ experience().contract }}
-      </p>
+    <div class="experience-top">
+      <div class="experience-heading">
+        <h4 class="experience-position">
+          {{ experience().position | uppercase }}
+        </h4>
+        <p class="experience-meta">
+          {{ experience().company }} · {{ experience().contract }}
+        </p>
+      </div>
+
+      <div class="experience-location">
+        {{ experience().location | uppercase }}
+      </div>
     </div>
 
     <div class="experience-stacks">
